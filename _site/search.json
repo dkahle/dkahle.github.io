@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "David Kahle",
+    "section": "",
+    "text": "Welcome to my webpage!\nI am an associate professor in the Department of Statistical Science at Baylor University.\nMost of my work is in statistical computing and graphics, especially statistical software development in R. Current major projects involve statistical graphics (ggvfields, ggdensity and others to come), algebraic statistics (mpoly, algstat, latte, m2r) and Bayesian statistics for pharmaceutical clinical trials (proprietary). I also wrote the ggmap package with Hadley Wickham and maintain it when I have time."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "David Kahle",
+    "section": "",
+    "text": "Welcome to my webpage!\nI am an associate professor in the Department of Statistical Science at Baylor University.\nMost of my work is in statistical computing and graphics, especially statistical software development in R. Current major projects involve statistical graphics (ggvfields, ggdensity and others to come), algebraic statistics (mpoly, algstat, latte, m2r) and Bayesian statistics for pharmaceutical clinical trials (proprietary). I also wrote the ggmap package with Hadley Wickham and maintain it when I have time."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "David Kahle",
+    "section": "Education",
+    "text": "Education\nPh.D. in Statistics | Rice University | 2011\nM.A. in Statistics | Rice University | 2010\nB.A. in Mathematics | University of Richmond | 2006"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "David Kahle",
+    "section": "Experience",
+    "text": "Experience\nAssociate Professor of Statistical Science, Baylor University | 2017 - present\nAssistant Professor of Statistical Science, Baylor University | 2011 - 2017"
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "David Kahle",
+    "section": "Bio",
+    "text": "Bio\nI currently hold the position of Associate Professor in the Department of Statistical Science at Baylor University. Before coming to Baylor in 2011 I earned my doctorate from the Department of Statistics at Rice University in Houston, Texas. For my undergraduate degree I attended the University of Richmond and received my degree in mathematics working primarily with Bill Ross.\nDuring my undergraduate summers, Javier Rojo slowly turned me into a statistician through his fantastic REU RUSIS. While at Rice for my graduate studies I worked with Dr. Rojo as part of RUSIS teaching statistical computing and graphics during the summers, and he later became my doctoral thesis advisor. A program very dear to me, I spent five years with RUSIS as a student or teacher and was the program’s second Ph.D.\nMy research interests are wide ranging but generally revolve around statistical computing and graphics. My research right now focuses mostly on statistical graphics, algebraic statistics, and Bayesian biopharmaceutical statistics. I also maintain R’s ggmap package, which I co-authored with the inimitable Hadley Wickham. Theoretical research I have done recently involves algebraic pattern recognition, Markov chain Monte Carlo algorithms for exact inference in discrete exponential family models, and double sampling procedures for count data.\nOutside of Marrs McLean, my wife and I enjoy Latin dance, musical theater, and playing with our three daughters."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Predicting House Prices with Machine Learning\n\n\n\nPython\n\nMachine Learning\n\nData Cleaning\n\n\n\nThis project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.\n\n\n\nJan 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nCustomer Segmentation Using Clustering Techniques\n\n\n\nR\n\nMachine Learning\n\nClustering\n\nStatistical Modelling\n\n\n\nThis project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.\n\n\n\nApr 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualizing Global CO2 Emissions\n\n\n\nR\n\nData Visualization\n\nEnvironmental Science\n\n\n\nThis project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.\n\n\n\nJul 1, 2024\n\n\n\n\n\n\nNo matching items"
+  }
+]

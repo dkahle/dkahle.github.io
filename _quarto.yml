@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "David Kahle"
+  site-url: "https://www.kahle.io"
+  open-graph: true
+  page-footer: "© 2025 David Kahle | Made with Quarto"
+  # sidebar:
+  #   contents:
+  #     - text: CV
+  #       href: cv.qmd
+  #   tools:
+  #     - icon: github
+  #       href: https://github.com/dkahle
+  #     - icon: linkedin
+  #       href: https://www.linkedin.com/in/david-j-kahle
+  #     - icon: twitter-x
+  #       href: https://x.com/davidjkahle
+  #     - icon: file-earmark-person-fill
+  #       href: cv.qmd
+
+format:
+  html:
+    theme: [flatly, styles.scss]
+

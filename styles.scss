@@ -1,0 +1,62 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Colors */
+$theme-dark-gray: #141A1C;
+$theme-light-gray: #D5D5D5;
+$theme-light-blue: #60D1F2;
+$theme-light-red: #E76C67;
+$theme-soft-green: #6DCB60;
+$theme-soft-gold: #EFC24B;
+
+
+$body-bg: $theme-dark-gray;
+$body-color: $theme-light-gray; /* text color */
+$link-color: $theme-soft-green;
+
+/* Fonts */
+$font-family-sans-serif: 'Inter', -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-size-root: 17px;
+$headings-font-family: 'Merriweather', serif;
+$font-family-sans-serif: #B3B5B5;
+
+
+h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.sidebar {
+  color: $theme-light-gray;
+}
+
+/* Smooth dark-gold hover for links */
+a, a:link, a:visited {
+  text-decoration: none !important;      /* override Bootstrap */
+  transition: color 0.5s ease;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: $theme-soft-gold;
+}
+
+/* Float the inline Table-of-Contents while scrolling */
+nav#TOC {
+  position: sticky;
+  top: calc(var(--bs-navbar-height, 56px) + 1rem);
+  max-height: calc(100vh - var(--bs-navbar-height, 56px) - 2rem);
+  overflow-y: auto;
+}
+
+/* Float the “about” card (trestles template) */
+/* Adapted from Filip Reierson’s floating-profile CSS  [oai_citation:0‡filipr.com](https://www.filipr.com/posts/floating-profile-picture/?utm_source=chatgpt.com) */
+@media (min-width: 992px) {
+  div.quarto-about-trestles .about-entity {
+    position: sticky;
+    top: calc(var(--bs-navbar-height, 56px) + 1rem);
+    align-self: flex-start;   /* keeps the card at the top of its column */
+  }
+}

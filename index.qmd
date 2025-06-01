@@ -1,0 +1,61 @@
+---
+title: "David Kahle"
+subtitle: "Computational Statistician"
+image: profile.jpg
+toc: true
+toc-title: ""
+about:
+  template: trestles
+  image-shape: round
+  image-width: 220px
+  links:
+    - icon: github
+      href: https://github.com/dkahle
+    - icon: linkedin
+      href: https://www.linkedin.com/in/david-j-kahle
+    - icon: twitter-x
+      href: https://x.com/davidjkahle
+    - icon: file-earmark-person-fill
+      href: cv.qmd
+---
+
+
+## Welcome
+
+Welcome to my webpage!
+
+I am an associate professor in the [Department of Statistical Science](http://www.baylor.edu/statistics/) at [Baylor University](http://www.baylor.edu/).
+
+Most of my work is in statistical computing and graphics, especially statistical software development in [R](http://www.r-project.org/). Current major projects involve statistical graphics ([ggvfields](https://dustysturner.com/ggvfields/), [ggdensity](https://jamesotto852.github.io/ggdensity/) and others to come), algebraic statistics ([mpoly](https://github.com/dkahle/mpoly), [algstat](https://github.com/dkahle/algstat), [latte](https://github.com/dkahle/latte), [m2r](https://github.com/coneill-math/m2r)) and Bayesian statistics for pharmaceutical clinical trials (proprietary).  I also wrote the [ggmap](https://github.com/dkahle/ggmap) package with Hadley Wickham and maintain it when I have time.
+
+
+
+
+## Education
+
+Ph.D. in Statistics \| [[Rice University]{style="color: #60D1F2"}](https://statistics.rice.edu) \| 2011
+
+M.A. in Statistics \| [[Rice University]{style="color: #60D1F2"}](https://statistics.rice.edu) \| 2010
+
+B.A. in Mathematics \| [[University of Richmond]{style="color: #E76C67"}](https://math.richmond.edu) \| 2006
+
+
+
+## Experience
+
+Associate Professor of Statistical Science, Baylor University \| 2017 - present
+
+Assistant Professor of Statistical Science, Baylor University \| 2011 - 2017
+
+
+
+
+## Bio
+
+I currently hold the position of Associate Professor in the [Department of Statistical Science](https://www.baylor.edu/statistics/) at [Baylor University](https://www.baylor.edu/).  Before coming to Baylor in 2011 I earned my doctorate from the [Department of Statistics](https://statistics.rice.edu/) at [Rice University](https://www.rice.edu/) in Houston, Texas.  For my undergraduate degree I attended the [University of Richmond](https://www.richmond.edu/) and received my degree in [mathematics](https://math.richmond.edu/) working primarily with [Bill Ross](https://math.richmond.edu/faculty/wross/). 
+
+During my undergraduate summers, [Javier Rojo](https://publichealth.indiana.edu/research/faculty-directory/profile.html?user=jrojo) slowly turned me into a statistician through his fantastic [REU RUSIS](https://www.stat.rice.edu/~jrojo/RUSIS/RUSIS.html).  While at Rice for my graduate studies I worked with Dr. Rojo as part of RUSIS teaching statistical computing and graphics during the summers, and he later became my doctoral thesis advisor.  A program very dear to me, I spent five years with RUSIS as a student or teacher and was the program's second Ph.D.
+
+My research interests are wide ranging but generally revolve around statistical computing and graphics.  My research right now focuses mostly on statistical graphics, algebraic statistics, and Bayesian biopharmaceutical statistics.  I also maintain R's ggmap package, which I co-authored with the inimitable [Hadley Wickham](https://hadley.nz).  Theoretical research I have done recently involves algebraic pattern recognition, Markov chain Monte Carlo algorithms for exact inference in discrete exponential family models, and double sampling procedures for count data.  
+
+Outside of Marrs McLean, my wife and I enjoy Latin dance, musical theater, and playing with our three daughters.
