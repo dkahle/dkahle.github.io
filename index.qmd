@@ -16,13 +16,13 @@ about:
     - icon: twitter-x
       href: https://x.com/davidjkahle
     - icon: file-earmark-person-fill
-      href: cv.qmd
+      href: cv.pdf
 ---
 
 
 ## Welcome
 
-Welcome to my webpage!
+Welcome to my webpage! I'm still transitioning the page; pardon the mess.
 
 I am an associate professor in the [Department of Statistical Science](http://www.baylor.edu/statistics/) at [Baylor University](http://www.baylor.edu/).
 
