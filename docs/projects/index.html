@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>David Kahle</title>
+<title>Projects – David Kahle</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b20a512e9d497ac54cfb1ebe763a8c44.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b20a512e9d497ac54cfb1ebe763a8c44.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -65,96 +68,211 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<meta property="og:title" content="David Kahle">
-<meta property="og:description" content="Computational Statistician">
-<meta property="og:image" content="https://www.kahle.io/profile.jpg">
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-image","listing-description","listing-categories","listing-date"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Projects – David Kahle">
+<meta property="og:image" content="https://www.kahle.io/projects/images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg">
 <meta property="og:site_name" content="David Kahle">
 </head>
 
-<body class="quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
-  <li><a href="#bio" id="toc-bio" class="nav-link" data-scroll-target="#bio">Bio</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="profile.jpg" class="about-image
-  round " style="height: 220px; width: 220px;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">David Kahle</h1>
-<p class="subtitle lead">Computational Statistician</p>
+<h1 class="title">Projects</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-    <div class="about-links">
-  <a href="https://github.com/dkahle" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://www.linkedin.com/in/david-j-kahle" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="https://x.com/davidjkahle" class="about-link" rel="" target="">
-    <i class="bi bi-twitter-x"></i>
-     <span class="about-link-text"></span>
-  </a>
-  <a href="/cv.pdf" class="about-link" rel="" target="">
-    <i class="bi bi-file-earmark-person-fill"></i>
-     <span class="about-link-text"></span>
-  </a>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDRGF0YSUyMENsZWFuaW5n" data-listing-date-sort="1704088800000">
+<a href="https://example.com/house-prices" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Predicting House Prices with Machine Learning
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMENsZWFuaW5n'); return false;">Data Cleaning</div>
+
 </div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-
-<section id="welcome" class="level2">
-<h2 data-anchor-id="welcome">Welcome</h2>
-<p>Welcome to my webpage! I’m still transitioning the page; pardon the mess.</p>
-<p>I am an associate professor in the <a href="http://www.baylor.edu/statistics/">Department of Statistical Science</a> at <a href="http://www.baylor.edu/">Baylor University</a>.</p>
-<p>Most of my work is in statistical computing and graphics, especially statistical software development in <a href="http://www.r-project.org/">R</a>. Current major projects involve statistical graphics (<a href="https://dustysturner.com/ggvfields/">ggvfields</a>, <a href="https://jamesotto852.github.io/ggdensity/">ggdensity</a> and others to come), algebraic statistics (<a href="https://github.com/dkahle/mpoly">mpoly</a>, <a href="https://github.com/dkahle/algstat">algstat</a>, <a href="https://github.com/dkahle/latte">latte</a>, <a href="https://github.com/coneill-math/m2r">m2r</a>) and Bayesian statistics for pharmaceutical clinical trials (proprietary). I also wrote the <a href="https://github.com/dkahle/ggmap">ggmap</a> package with Hadley Wickham and maintain it when I have time.</p>
-</section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p>Ph.D.&nbsp;in Statistics | <a href="https://statistics.rice.edu"><span style="color: #60D1F2">Rice University</span></a> | 2011</p>
-<p>M.A.&nbsp;in Statistics | <a href="https://statistics.rice.edu"><span style="color: #60D1F2">Rice University</span></a> | 2010</p>
-<p>B.A. in Mathematics | <a href="https://math.richmond.edu"><span style="color: #E76C67">University of Richmond</span></a> | 2006</p>
-</section>
-<section id="experience" class="level2">
-<h2 data-anchor-id="experience">Experience</h2>
-<p>Associate Professor of Statistical Science, <a href="https://statistics.artsandsciences.baylor.edu">Baylor University</a> | 2017 - present</p>
-<p>Assistant Professor of Statistical Science, <a href="https://statistics.artsandsciences.baylor.edu">Baylor University</a> | 2011 - 2017</p>
-</section>
-<section id="bio" class="level2">
-<h2 data-anchor-id="bio">Bio</h2>
-<p>I currently hold the position of Associate Professor in the <a href="https://www.baylor.edu/statistics/">Department of Statistical Science</a> at <a href="https://www.baylor.edu/">Baylor University</a>. Before coming to Baylor in 2011 I earned my doctorate from the <a href="https://statistics.rice.edu/">Department of Statistics</a> at <a href="https://www.rice.edu/">Rice University</a> in Houston, Texas. For my undergraduate degree I attended the <a href="https://www.richmond.edu/">University of Richmond</a> and received my degree in <a href="https://math.richmond.edu/">mathematics</a> working primarily with <a href="https://math.richmond.edu/faculty/wross/">Bill Ross</a>.</p>
-<p>During my undergraduate summers, <a href="https://publichealth.indiana.edu/research/faculty-directory/profile.html?user=jrojo">Javier Rojo</a> slowly turned me into a statistician through his fantastic <a href="https://www.stat.rice.edu/~jrojo/RUSIS/RUSIS.html">REU RUSIS</a>. While at Rice for my graduate studies I worked with Dr.&nbsp;Rojo as part of RUSIS teaching statistical computing and graphics during the summers, and he later became my doctoral thesis advisor. A program very dear to me, I spent five years with RUSIS as a student or teacher and was the program’s second Ph.D.</p>
-<p>My research interests are wide ranging but generally revolve around statistical computing and graphics. My research right now focuses mostly on statistical graphics, algebraic statistics, and Bayesian biopharmaceutical statistics. I also maintain R’s ggmap package, which I co-authored with the inimitable <a href="https://hadley.nz">Hadley Wickham</a>. Theoretical research I have done recently involves algebraic pattern recognition, Markov chain Monte Carlo algorithms for exact inference in discrete exponential family models, and double sampling procedures for count data.</p>
-<p>Outside of Marrs McLean, my wife and I enjoy Latin dance, musical theater, and playing with our three daughters.</p>
-
-
-</section>
-</main></div>
+<div class="card-text listing-description delink">
+<p>This project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.</p>
 </div>
- <!-- /main -->
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 1, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="UiUyQ01hY2hpbmUlMjBMZWFybmluZyUyQ0NsdXN0ZXJpbmclMkNTdGF0aXN0aWNhbCUyME1vZGVsbGluZw==" data-listing-date-sort="1711947600000">
+<a href="https://example.com/customer-segmentation" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/adrien-delforge-CrHG_ZYn1Dw-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Customer Segmentation Using Clustering Techniques
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Q2x1c3RlcmluZw=='); return false;">Clustering</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBNb2RlbGxpbmc='); return false;">Statistical Modelling</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>This project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Apr 1, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="UiUyQ0RhdGElMjBWaXN1YWxpemF0aW9uJTJDRW52aXJvbm1lbnRhbCUyMFNjaWVuY2U=" data-listing-date-sort="1719810000000">
+<a href="https://example.com/co2-visualization" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/anne-nygard-vc-vPgGqAr4-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Visualizing Global CO2 Emissions
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">Data Visualization</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnRhbCUyMFNjaWVuY2U='); return false;">Environmental Science</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>This project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 1, 2024
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
