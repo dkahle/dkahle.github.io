@@ -22,7 +22,7 @@ about:
 
 ## Welcome
 
-Welcome to my webpage! I'm still transitioning the page; pardon the mess.
+Welcome to my webpage! 
 
 I am an associate professor in the [Department of Statistical Science](http://www.baylor.edu/statistics/) at [Baylor University](http://www.baylor.edu/).
 
