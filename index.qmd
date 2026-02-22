@@ -2,6 +2,7 @@
 title: "David Kahle"
 subtitle: "Computational Statistician"
 image: profile.jpg
+page-layout: full
 toc: true
 toc-title: ""
 about:
@@ -30,22 +31,36 @@ Most of my work is in statistical computing and graphics, especially statistical
 
 
 
+## Experience
+
+::: {.timeline}
+::: {.timeline-item}
+**Associate Professor of Statistical Science**\
+[Baylor University](https://statistics.artsandsciences.baylor.edu) · 2017 – present
+:::
+::: {.timeline-item}
+**Assistant Professor of Statistical Science**\
+[Baylor University](https://statistics.artsandsciences.baylor.edu) · 2011 – 2017
+:::
+:::
 
 ## Education
 
-Ph.D. in Statistics \| [[Rice University]{style="color: #60D1F2"}](https://statistics.rice.edu) \| 2011
+::: {.timeline}
+::: {.timeline-item}
+**Ph.D. in Statistics**\
+[[Rice University]{style="color: #60D1F2"}](https://statistics.rice.edu) · 2011
+:::
+::: {.timeline-item}
+**M.A. in Statistics**\
+[[Rice University]{style="color: #60D1F2"}](https://statistics.rice.edu) · 2010
+:::
+::: {.timeline-item}
+**B.A. in Mathematics**\
+[[University of Richmond]{style="color: #E76C67"}](https://math.richmond.edu) · 2006
+:::
+:::
 
-M.A. in Statistics \| [[Rice University]{style="color: #60D1F2"}](https://statistics.rice.edu) \| 2010
-
-B.A. in Mathematics \| [[University of Richmond]{style="color: #E76C67"}](https://math.richmond.edu) \| 2006
-
-
-
-## Experience
-
-Associate Professor of Statistical Science, [Baylor University](https://statistics.artsandsciences.baylor.edu) \| 2017 - present
-
-Assistant Professor of Statistical Science, [Baylor University](https://statistics.artsandsciences.baylor.edu) \| 2011 - 2017
 
 
 

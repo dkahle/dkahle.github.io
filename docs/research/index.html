@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – David Kahle</title>
+<title>Research – David Kahle</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -70,72 +68,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-image','listing-description','listing-categories','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-image","listing-description","listing-categories","listing-date"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Projects – David Kahle">
-<meta property="og:image" content="https://www.kahle.io/projects/images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg">
+<meta property="og:title" content="Research – David Kahle">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="David Kahle">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -153,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
+    <a class="nav-link active" href="../research/index.html" aria-current="page"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
@@ -200,13 +140,23 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#journal-articles" id="toc-journal-articles" class="nav-link active" data-scroll-target="#journal-articles">Journal Articles</a></li>
+  <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book Chapters</a></li>
+  <li><a href="#under-review" id="toc-under-review" class="nav-link" data-scroll-target="#under-review">Under Review</a></li>
+  <li><a href="#in-preparation" id="toc-in-preparation" class="nav-link" data-scroll-target="#in-preparation">In Preparation</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Research</h1>
 </div>
 
 
@@ -223,107 +173,69 @@ window.Quarto = {
 </header>
 
 
+<p>My research spans statistical computing and graphics, algebraic statistics, and Bayesian methods for pharmaceutical statistics.</p>
+<section id="journal-articles" class="level2">
+<h2 class="anchored" data-anchor-id="journal-articles">Journal Articles</h2>
+<div class="papers blue">
+<p>Turner, D., <strong>D. Kahle</strong>, and R. Sturdivant (2026). “<a href="https://journal.r-project.org/">ggvfields: Vector Field Visualization in R</a>.” <em>The R Journal</em>, accepted.</p>
+<p>Kim, F. S., <strong>D. Kahle</strong>, N. Fleming, M. Gallaugher, T. Houston, S. Lamsal, and R. X. Sturdivant (2025). “<a href="https://www.sciencedirect.com/science/article/pii/S016147542400071X">Comparing Costs and Utilization Between Provider Types for Back and Neck Pain: A Cross-Sectional Study.</a>” <em>Journal of Manipulative and Physiological Therapeutics</em>, 48(1–5):69–78.</p>
+<p>Miyakawa, E. and <strong>D. Kahle</strong> (2025). “<a href="https://doi.org/10.1007/978-3-031-99879-9_4">A Practical Comparison of Bayesian Computing Platforms in R.</a>” In: Han, H. and J. Stamey (eds) <em>New Frontiers in Data Science</em>. SDSC 2025. Communications in Computer and Information Science, vol 2556, 58–74. Springer, Cham.</p>
+<p><strong>Kahle, D.</strong> and J. Stamey (2025). “<a href="https://peerj.com/articles/cs-3205/">invgamma: The Inverse Gamma Distribution in R</a>.” <em>PeerJ Computer Science</em>, 11:e3205, 1–19.</p>
+<p>Prajapati, P., J. Stamey, <strong>D. Kahle</strong>, J. Seaman, Z. Thomas, and M. Sonksen (2025). “<a href="https://www.mdpi.com/2571-905X/8/3/51">Elicitation of a Prior for the Weibull Distribution</a>.” <em>Stats</em>, 8(3):1–14.</p>
+<p>Hebdon, R., J. Stamey, <strong>D. Kahle</strong>, and X. Zhang (2024). “<a href="https://link.springer.com/article/10.1186/s12874-024-02322-2">unmconf: An R Package for Bayesian Regression with Unmeasured Confounders</a>.” <em>BMC Medical Research Methodology</em>, 24(195):1–10.</p>
+<p>Lamsal, S. and <strong>D. Kahle</strong> (2024). “In-Game Win Prediction Models for Cricket.” In: <em>Recent Advances in Next-Generation Data Science, Southwest Data Science Conference 2024</em>. Communications in Computer and Information Science, vol 2156, 148–168. Springer, Cham.</p>
+<p>Otto, J. and <strong>D. Kahle</strong> (2023). “<a href="https://journal.r-project.org/articles/RJ-2023-048/">ggdensity: Improved Bivariate Density Visualization in R</a>.” <em>The R Journal</em>, 15(2):220–236.</p>
+<p>Casement, C. and <strong>D. Kahle</strong> (2023). “<a href="https://link.springer.com/article/10.1007/s42952-022-00189-x">The Phoropter Method – A Stochastic Graphical Procedure for Prior Elicitation in Univariate Data Models</a>.” <em>Journal of Korean Statistical Society</em>, 52:60–82.</p>
+<p><strong>Kahle, D.</strong>, C. O’Neill, and J. Sommars (2020). “<a href="https://www.jstatsoft.org/article/view/v093i09">A Computer Algebra System for R: Macaulay2 and the m2r Package</a>.” <em>Journal of Statistical Software</em>, 93(9):1–31.</p>
+<p>Lukens, W., G. Stinchcomb, L. Nordt, <strong>D. Kahle</strong>, S. Driese, and J. Tubbs (2019). “<a href="https://ajsonline.org/article/65779-recursive-partitioning-improves-paleosol-proxies-for-rainfall">Recursive Partitioning Improves Paleosol Proxies for Rainfall</a>.” <em>American Journal of Science</em>, 319:819–845.</p>
+<p><strong>Kahle, D.</strong> (2018). “Poisson Distribution.” <em>The SAGE Encyclopedia of Educational Research, Measurement and Evaluation</em>. Ed. Bruce Frey.</p>
+<p><strong>Kahle, D.</strong> (2018). “Bayesian Statistics.” <em>The SAGE Encyclopedia of Educational Research, Measurement and Evaluation</em>. Ed. Bruce Frey.</p>
+<p><strong>Kahle, D.</strong>, R. Yoshida, and L. Garcia-Puente (2018). “<a href="https://link.springer.com/article/10.1007/s10463-017-0615-z">Hybrid Schemes for Exact Conditional Inference in Discrete Exponential Families</a>.” <em>Annals of the Institute of Statistical Mathematics</em>, 70(5):983–1011.</p>
+<p>Mansell, A., <strong>D. Kahle</strong>, and D. Bellert (2017). “<a href="https://www.mathematica-journal.com/2017/09/26/calculating-rrkm-rate-constants-from-vibrational-frequencies-and-their-dynamic-interpretation/">Calculating RRKM Rate Constants from Vibrational Frequencies and their Dynamic Interpretation</a>.” <em>The Mathematica Journal</em>, 19:1–20.</p>
+<p>Casement, C. and <strong>D. Kahle</strong> (2017). “<a href="https://www.tandfonline.com/doi/abs/10.1080/03610918.2017.1361981">Graphical Prior Elicitation in Univariate Models</a>.” <em>Communications in Statistics – Simulation and Computation</em>, 47(10):2906–2924.</p>
+<p>Young, P., <strong>D. Kahle</strong>, and D. Young (2017). “<a href="http://www.sciencedirect.com/science/article/pii/S0167715216302036">On the independence of singular multivariate skew-normal sub-vectors.</a>” <em>Statistics &amp; Probability Letters</em>, 122:58–62.</p>
+<p><strong>Kahle, D.</strong>, J. Stamey, F. Natanegara, K. Price, and B. Han (2016). “<a href="https://medcraveonline.com/BBIJ/facilitated-prior-elicitation-with-the-wolfram-cdf.html">Facilitated Prior Elicitation with the Wolfram CDF</a>.” <em>Biometrics &amp; Biostatistics International Journal</em>, 3(6):1–6.</p>
+<p><strong>Kahle, D.</strong>, P. Young, B. Greer, and D. Young (2016). “<a href="https://www.sciencedirect.com/science/article/abs/pii/S0167947315002406">Confidence Intervals for the Ratio of Two Poisson Rates Under One-Way Differential Misclassification Using Double Sampling</a>.” <em>Computational Statistics &amp; Data Analysis</em>, 95:122–132.</p>
+<p>Wu, W., J. Stamey, and <strong>D. Kahle</strong> (2015). “<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4586634/">A Bayesian Approach to Account for Misclassification and Overdispersion in Observational Count Data</a>.” <em>International Journal of Environmental Research and Public Health</em>, 12(9):10648–10661.</p>
+<p>Sides, R., <strong>D. Kahle</strong>, and J. Stamey (2015). “<a href="http://medcraveonline.com/BBIJ/BBIJ-02-00023.pdf">Bayesian Sample Size Determination in Two-Sample Poisson Models.</a>” <em>Biometrics &amp; Biostatistics International Journal</em>, 2(1):1–5.</p>
+<p><strong>Kahle, D.</strong> (2014). “<a href="https://www.tandfonline.com/doi/abs/10.1080/10691898.2014.11889700">Animating Statistics: A New Kind of Applet for Exploring Probability Distributions</a>.” <em>Journal of Statistics Education</em>, 20(2):1–12.</p>
+<p><strong>Kahle, D.</strong> (2013). “<a href="https://journal.r-project.org/articles/RJ-2013-015/">mpoly: Multivariate Polynomials in R</a>.” <em>The R Journal</em>, 5(1):162–170.</p>
+<p><strong>Kahle, D.</strong> and H. Wickham (2013). “<a href="https://journal.r-project.org/articles/RJ-2013-014/">ggmap: Spatial Visualization with ggplot2</a>.” <em>The R Journal</em>, 5(1):144–161.</p>
+<p>Stein, R. M., B. Buzcu-Guven, L. Dueñas-Osorio, D. Subramanian, and <strong>D. Kahle</strong> (2013). “<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/psj.12019">How Risk Perceptions Influence Evacuations from Hurricanes and Compliance with Government Directives.</a>” <em>Policy Studies Journal</em>, 41(2):319–342.</p>
+</div>
+</section>
+<section id="book-chapters" class="level2">
+<h2 class="anchored" data-anchor-id="book-chapters">Book Chapters</h2>
+<div class="papers green">
+<p><strong>Kahle, D.</strong>, J. Seaman, and J. Stamey (2022). “An Overview of Bayesian Computation.” In: Faya, P. and T. Pourmohamad (eds) <em><a href="https://www.routledge.com/Case-Studies-in-Bayesian-Methods-for-Biopharmaceutical-CMC/Faya-Pourmohamad/p/book/9781032185484">Case Studies in Bayesian Methods for Biopharmaceutical CMC</a></em>. Chapman &amp; Hall/CRC Biostatistics.</p>
+<p>Seaman, J., <strong>D. Kahle</strong>, and J. Stamey (2022). “Basic Bayesian Model Checking.” In: Faya, P. and T. Pourmohamad (eds) <em><a href="https://www.routledge.com/Case-Studies-in-Bayesian-Methods-for-Biopharmaceutical-CMC/Faya-Pourmohamad/p/book/9781032185484">Case Studies in Bayesian Methods for Biopharmaceutical CMC</a></em>. Chapman &amp; Hall/CRC Biostatistics.</p>
+<p><strong>Kahle, D.</strong> and M. Sonksen (2019). “Computational Tools.” In: Natanegara, F. and M. Lakshminarayanan (eds) <em><a href="https://www.routledge.com/Bayesian-Applications-in-Pharmaceutical-Development/Lakshminarayanan-Natanegara/p/book/9781032177021">Bayesian Applications in Pharmaceutical Development</a></em>. Chapman &amp; Hall/CRC Statistics.</p>
+<p>Seaman, J., J. Stamey, <strong>D. Kahle</strong>, and S. Blair (2019). “A Brief Guide to Bayesian Model Checking.” In: Natanegara, F. and M. Lakshminarayanan (eds) <em><a href="https://www.routledge.com/Bayesian-Applications-in-Pharmaceutical-Development/Lakshminarayanan-Natanegara/p/book/9781032177021">Bayesian Applications in Pharmaceutical Development</a></em>. Chapman &amp; Hall/CRC Statistics.</p>
+</div>
+</section>
+<section id="under-review" class="level2">
+<h2 class="anchored" data-anchor-id="under-review">Under Review</h2>
+<div class="papers gold">
+<p>Otto, J. and <strong>D. Kahle</strong>. “tldrPages: Quick Documentation in the R Console.”</p>
+<p>Kim, F. S., <strong>D. Kahle</strong>, N. S. Fleming, M. Gallaugher, T. Houston, C. Fox, B. Cahill, and R. Sturdivant. “Comparing Costs and Utilization Between Airrosti and Five Provider Types for Musculoskeletal Pain.”</p>
+<p>Mitchell, C., P. James, D. Kring, and <strong>D. Kahle</strong>. “Impact Induced Porosity of Meteor Crater.”</p>
+</div>
+</section>
+<section id="in-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="in-preparation">In Preparation</h2>
+<div class="papers red">
+<p><strong>Kahle, D.</strong> and J. Hauenstein. “<a href="https://arxiv.org/abs/2410.16071">Stochastic Exploration of Real Varieties via Variety Distributions</a>.” arXiv:2410.16071.</p>
+<p>Morgan, N., M. Gallaugher, and <strong>D. Kahle</strong>. “ggclassify: Visualizing Classifiers in R.”</p>
+<p>Blair, S., <strong>D. Kahle</strong>, and J. Seaman. “Sensitivity to Prior Misspecification in the Mode-Percentile Method of Elicitation.”</p>
+<p>Young, P., <strong>D. Kahle</strong>, J. Patrick, and D. Young. “A Sufficient Linear-Dimension Reduction Model for Supervised Classification for Multiple Multivariate Skew-Normal Populations.”</p>
+<p><strong>Kahle, D.</strong> and J. Hauenstein. “Algebraic Pattern Recognition.”</p>
+<p>Ma, Q. and <strong>D. Kahle</strong>. “Parameterizing One-Dimensional Real Varieties with Deep Learning.”</p>
+</div>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UHl0aG9uJTJDTWFjaGluZSUyMExlYXJuaW5nJTJDRGF0YSUyMENsZWFuaW5n" data-listing-date-sort="1704088800000">
-<a href="https://example.com/house-prices" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/breno-assis-r3WAWU5Fi5Q-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Predicting House Prices with Machine Learning
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMENsZWFuaW5n'); return false;">Data Cleaning</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This project involves using machine learning algorithms to predict house prices based on various features such as location, size, and amenities. It includes data cleaning, feature engineering, and model selection.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jan 1, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UiUyQ01hY2hpbmUlMjBMZWFybmluZyUyQ0NsdXN0ZXJpbmclMkNTdGF0aXN0aWNhbCUyME1vZGVsbGluZw==" data-listing-date-sort="1711947600000">
-<a href="https://example.com/customer-segmentation" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/adrien-delforge-CrHG_ZYn1Dw-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Customer Segmentation Using Clustering Techniques
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2x1c3RlcmluZw=='); return false;">Clustering</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljYWwlMjBNb2RlbGxpbmc='); return false;">Statistical Modelling</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This project focuses on segmenting customers into different groups based on their purchasing behavior and demographics. It uses clustering algorithms like K-means and hierarchical clustering to identify distinct customer segments.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Apr 1, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="UiUyQ0RhdGElMjBWaXN1YWxpemF0aW9uJTJDRW52aXJvbm1lbnRhbCUyMFNjaWVuY2U=" data-listing-date-sort="1719810000000">
-<a href="https://example.com/co2-visualization" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/anne-nygard-vc-vPgGqAr4-unsplash.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Visualizing Global CO2 Emissions
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">Data Visualization</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RW52aXJvbm1lbnRhbCUyMFNjaWVuY2U='); return false;">Environmental Science</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>This project involves creating visualizations to show trends in global CO2 emissions over time. It includes data extraction from public databases, data cleaning, and using visualization libraries to create interactive charts and graphs.</p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 1, 2024
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

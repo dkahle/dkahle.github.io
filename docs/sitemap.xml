@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kahle.io/index.html</loc>
-    <lastmod>2025-11-04T10:16:53.209Z</lastmod>
+    <loc>https://www.kahle.io/blog/index.html</loc>
+    <lastmod>2026-02-22T21:01:55.854Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kahle.io/software/index.html</loc>
+    <lastmod>2026-02-22T22:48:39.304Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kahle.io/talks/index.html</loc>
+    <lastmod>2026-02-22T21:01:57.763Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kahle.io/research/index.html</loc>
+    <lastmod>2026-02-22T22:16:04.668Z</lastmod>
   </url>
   <url>
     <loc>https://www.kahle.io/projects/index.html</loc>
     <lastmod>2025-05-31T20:02:30.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kahle.io/index.html</loc>
+    <lastmod>2026-02-22T22:37:33.394Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.kahle.io/blog/posts/welcome/index.html</loc>
+    <lastmod>2026-02-22T21:02:03.121Z</lastmod>
   </url>
 </urlset>

@@ -8,22 +8,32 @@ website:
   title: "David Kahle"
   site-url: "https://www.kahle.io"
   open-graph: true
-  page-footer: "© 2025 David Kahle | Made with Quarto"
-  # sidebar:
-  #   contents:
-  #     - text: CV
-  #       href: cv.qmd
-  #   tools:
-  #     - icon: github
-  #       href: https://github.com/dkahle
-  #     - icon: linkedin
-  #       href: https://www.linkedin.com/in/david-j-kahle
-  #     - icon: twitter-x
-  #       href: https://x.com/davidjkahle
-  #     - icon: file-earmark-person-fill
-  #       href: cv.qmd
+  page-footer: "© 2025 - 2026 David Kahle | Made with Quarto"
+  navbar:
+    left:
+      - text: Research
+        href: research/index.qmd
+      - text: Software
+        href: software/index.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: Talks
+        href: talks/index.qmd
+      - text: CV
+        href: cv.pdf
+    right:
+      - icon: github
+        href: https://github.com/dkahle
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/david-j-kahle
+        aria-label: LinkedIn
+      - icon: twitter-x
+        href: https://x.com/davidjkahle
+        aria-label: Twitter/X
 
 format:
   html:
     theme: [flatly, styles.scss]
+    link-external-newwindow: true
 

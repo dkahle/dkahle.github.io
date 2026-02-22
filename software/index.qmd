@@ -1,0 +1,212 @@
+---
+title: "Software"
+toc: true
+toc-title: ""
+---
+
+I develop and maintain open-source R packages across statistical graphics, algebraic statistics, Bayesian methods, and more. Source code is on [GitHub](https://github.com/dkahle).
+
+## Statistical Graphics
+
+### [ggmap](https://github.com/dkahle/ggmap) <small class="text-muted">with Hadley Wickham</small>
+
+Spatial visualization with ggplot2. Downloads map tiles from Google Maps, OpenStreetMap, and Stamen Maps and renders them as ggplot2 objects. One of the most widely used R packages for spatial data visualization.
+
+[[GitHub]](https://github.com/dkahle/ggmap) [[CRAN]](https://cran.r-project.org/package=ggmap) · 7.5M downloads
+
+---
+
+### [ggdensity](https://jamesotto852.github.io/ggdensity/) <small class="text-muted">with James Otto</small>
+
+Interpretable bivariate density visualization for ggplot2 using highest density regions (HDRs). HDRs convey where the data actually are, rather than the density value itself, making them more natural to communicate.
+
+[[GitHub]](https://github.com/jamesotto852/ggdensity) [[CRAN]](https://cran.r-project.org/package=ggdensity) [[Docs]](https://jamesotto852.github.io/ggdensity/) · 38K downloads
+
+---
+
+### [ggvfields](https://dustysturner.com/ggvfields/) <small class="text-muted">with Dusty Turner and Rodney Sturdivant</small>
+
+Vector field visualization for ggplot2. Provides geoms for visualizing vector-valued functions and fields, with applications in physics, fluid dynamics, and statistical modeling.
+
+[[GitHub]](https://github.com/dustysturner/ggvfields) [[CRAN]](https://cran.r-project.org/package=ggvfields) [[Docs]](https://dustysturner.com/ggvfields/) · 2K downloads
+
+---
+
+### [ggfunction](https://github.com/dkahle/ggfunction) <small class="text-muted">with Dusty Turner, James Otto, and Rodney Sturdivant · in development</small>
+
+Mathematical functions and probability distributions, along with estimates, in ggplot2.
+
+[[GitHub]](https://dustysturner.com/ggfunction)
+
+---
+
+### [ggclassify](https://github.com/dkahle/ggclassify) <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small>
+
+Visualizing classifiers in R. Extends ggplot2 with tools for displaying decision boundaries and classification regions from statistical and machine learning models.
+
+[[GitHub]](https://github.com/dkahle/ggclassify)
+
+---
+
+### [biroot](https://github.com/dkahle/biroot) <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small>
+
+Tools for computing and visualizing bivariate level sets in R.
+
+[[GitHub]](https://github.com/dkahle/biroot)
+
+---
+
+## Algebraic Statistics
+
+### [mpoly](https://github.com/dkahle/mpoly)
+
+Symbolic computation with multivariate polynomials in R. Provides a full framework for polynomial arithmetic, calculus, evaluation, and manipulation in multiple variables.
+
+[[GitHub]](https://github.com/dkahle/mpoly) [[CRAN]](https://cran.r-project.org/package=mpoly) · 113K downloads
+
+---
+
+### [vnorm](https://github.com/dkahle/vnorm) <small class="text-muted">with Sonish Lamsal · in development</small>
+
+The variety normal distribution in R. Provides tools for working with probability distributions supported on algebraic varieties.
+
+[[GitHub]](https://github.com/dkahle/vnorm)
+
+---
+
+### [m2r](https://github.com/coneill-math/m2r) <small class="text-muted">with Christopher O'Neill and Jeff Sommars</small>
+
+An interface from R to Macaulay2, a computer algebra system for algebraic geometry and commutative algebra. Enables polynomial ring computations from within R.
+
+[[GitHub]](https://github.com/coneill-math/m2r) [[CRAN]](https://cran.r-project.org/package=m2r) · 32K downloads
+
+---
+
+
+
+### [algstat](https://github.com/dkahle/algstat) <small class="text-muted">with Luis Garcia-Puente and Ruriko Yoshida</small>
+
+Algebraic statistics in R. Provides tools for exact inference in discrete exponential family models and Markov chain Monte Carlo methods for contingency tables.
+
+[[GitHub]](https://github.com/dkahle/algstat) [[CRAN]](https://cran.r-project.org/package=algstat)
+
+---
+
+### [latte](https://github.com/dkahle/latte) <small class="text-muted">with Luis Garcia-Puente and Ruriko Yoshida</small>
+
+An R interface to LattE Macchiato and 4ti2 for counting lattice points in polytopes and solving integer programming problems. Used for exact inference in log-linear models.
+
+[[GitHub]](https://github.com/dkahle/latte) [[CRAN]](https://cran.r-project.org/package=latte)
+
+---
+
+### [bertini](https://github.com/dkahle/bertini)
+
+An R interface to Bertini, a software package for numerical algebraic geometry. Enables solving polynomial systems and computing algebraic varieties from R.
+
+[[GitHub]](https://github.com/dkahle/bertini)
+
+---
+
+### [tropical](https://github.com/dkahle/tropical) <small class="text-muted">with Peixin Gao, Grant Innerst, Dohyun Kim, Ruriko Yoshida, and Xi Zhang</small>
+
+Tropical geometry in R. Provides tools for computing and visualizing tropical algebraic objects.
+
+[[GitHub]](https://github.com/dkahle/tropical)
+
+---
+
+## Probability Distributions
+
+### [invgamma](https://github.com/dkahle/invgamma) <small class="text-muted">with James Stamey</small>
+
+The inverse gamma distribution in R: density, distribution, quantile, and random generation functions following base R conventions.
+
+[[GitHub]](https://github.com/dkahle/invgamma) [[CRAN]](https://cran.r-project.org/package=invgamma) · 405K downloads
+
+---
+
+### [chi](https://github.com/dkahle/chi)
+
+The chi distribution (not chi-squared) in R: density, distribution, quantile, and random generation functions.
+
+[[GitHub]](https://github.com/dkahle/chi) [[CRAN]](https://cran.r-project.org/package=chi) · 43K downloads
+
+---
+
+### [dirchlet](https://github.com/dkahle/dirchlet)
+
+The Dirichlet distribution in R: density, random generation, and related functions following base R conventions.
+
+[[GitHub]](https://github.com/dkahle/dirchlet)
+
+---
+
+### [betalu](https://github.com/dkahle/betalu)
+
+The beta distribution with support [l, u] in R, generalizing the standard beta distribution to arbitrary bounded intervals.
+
+[[GitHub]](https://github.com/dkahle/betalu)
+
+---
+
+## Bayesian Statistics
+
+### [unmconf](https://github.com/dkahle/unmconf) <small class="text-muted">with Ryan Hebdon, James Stamey, and Xiao Zhang</small>
+
+Bayesian regression with unmeasured confounders. Provides tools for fitting models that account for unmeasured confounding via informative priors.
+
+[[GitHub]](https://github.com/dkahle/unmconf) · 5K downloads
+
+---
+
+### [bayesRates](https://github.com/dkahle/bayesRates) <small class="text-muted">with James Stamey and Ryan Sides</small>
+
+Two-sample tests and sample size determination from a Bayesian perspective for Poisson and binomial models.
+
+[[GitHub]](https://github.com/dkahle/bayesRates)
+
+---
+
+## Applied Statistics
+
+### [TITAN2](https://cran.r-project.org/package=TITAN2) <small class="text-muted">with Matthew Baker and Ryan King</small>
+
+Threshold Indicator Taxa Analysis. Identifies community change points along environmental gradients using indicator species analysis and bootstrapping.
+
+[[CRAN]](https://cran.r-project.org/package=TITAN2) · 43K downloads
+
+---
+
+### [poisDoubleSamp](https://github.com/dkahle/poisDoubleSamp) <small class="text-muted">with Philip Young and Dean Young</small>
+
+Confidence intervals for the ratio of two Poisson rates under one-way differential misclassification using double sampling.
+
+[[GitHub]](https://github.com/dkahle/poisDoubleSamp) [[CRAN]](https://cran.r-project.org/package=poisDoubleSamp) · 33K downloads
+
+---
+
+
+## Documentation & Tools
+
+### [tldrPages](https://github.com/jamesotto852/tldrPages) <small class="text-muted">with James Otto</small>
+
+Short-form documentation in the R console. Provides compact, scannable help pages for R functions as an alternative to full `?` documentation.
+
+[[GitHub]](https://github.com/jamesotto852/tldrPages)
+
+---
+
+### [tldrDocs](https://github.com/jamesotto852/tldrDocs) <small class="text-muted">with James Otto</small>
+
+tldrPages documentation for base R functions, providing the content layer for the tldrPages system.
+
+[[GitHub]](https://github.com/jamesotto852/tldrDocs) [[CRAN]](https://cran.r-project.org/package=tldrDocs)
+
+---
+
+### [registers](https://github.com/dkahle/registers) <small class="text-muted">with James Otto</small>
+
+Registers for R. Tools for working with register-based data structures.
+
+[[GitHub]](https://github.com/dkahle/registers)

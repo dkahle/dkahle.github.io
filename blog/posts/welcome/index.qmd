@@ -1,0 +1,12 @@
+---
+title: "Starting a Blog"
+date: 2026-02-22
+categories: [meta]
+description: "A brief introduction to this blog and what you might find here."
+---
+
+I've been meaning to start a blog for a while. This is it.
+
+My plan is to write about things I find interesting: R, statistical computing, data visualization, and occasionally statistics itself. Posts will vary in length — some will be short notes I want to remember, others longer explorations of a method or package.
+
+If you find something useful here, that's a bonus.

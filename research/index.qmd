@@ -1,0 +1,99 @@
+---
+title: "Research"
+toc: true
+toc-title: ""
+---
+
+My research spans statistical computing and graphics, algebraic statistics, and Bayesian methods for pharmaceutical statistics.
+
+## Journal Articles
+
+::: {.papers .blue}
+Turner, D., **D. Kahle**, and R. Sturdivant (2026). "[ggvfields: Vector Field Visualization in R](https://journal.r-project.org/)." *The R Journal*, accepted.
+
+Kim, F. S., **D. Kahle**, N. Fleming, M. Gallaugher, T. Houston, S. Lamsal, and R. X. Sturdivant (2025). "[Comparing Costs and Utilization Between Provider Types for Back and Neck Pain: A Cross-Sectional Study.](https://www.sciencedirect.com/science/article/pii/S016147542400071X)" *Journal of Manipulative and Physiological Therapeutics*, 48(1–5):69–78.
+
+Miyakawa, E. and **D. Kahle** (2025). "[A Practical Comparison of Bayesian Computing Platforms in R.](https://doi.org/10.1007/978-3-031-99879-9_4)" In: Han, H. and J. Stamey (eds) *New Frontiers in Data Science*. SDSC 2025. Communications in Computer and Information Science, vol 2556, 58–74. Springer, Cham.
+
+**Kahle, D.** and J. Stamey (2025). "[invgamma: The Inverse Gamma Distribution in R](https://peerj.com/articles/cs-3205/)." *PeerJ Computer Science*, 11:e3205, 1–19.
+
+Prajapati, P., J. Stamey, **D. Kahle**, J. Seaman, Z. Thomas, and M. Sonksen (2025). "[Elicitation of a Prior for the Weibull Distribution](https://www.mdpi.com/2571-905X/8/3/51)." *Stats*, 8(3):1–14.
+
+Hebdon, R., J. Stamey, **D. Kahle**, and X. Zhang (2024). "[unmconf: An R Package for Bayesian Regression with Unmeasured Confounders](https://link.springer.com/article/10.1186/s12874-024-02322-2)." *BMC Medical Research Methodology*, 24(195):1–10.
+
+Lamsal, S. and **D. Kahle** (2024). "In-Game Win Prediction Models for Cricket." In: *Recent Advances in Next-Generation Data Science, Southwest Data Science Conference 2024*. Communications in Computer and Information Science, vol 2156, 148–168. Springer, Cham.
+
+Otto, J. and **D. Kahle** (2023). "[ggdensity: Improved Bivariate Density Visualization in R](https://journal.r-project.org/articles/RJ-2023-048/)." *The R Journal*, 15(2):220–236.
+
+Casement, C. and **D. Kahle** (2023). "[The Phoropter Method – A Stochastic Graphical Procedure for Prior Elicitation in Univariate Data Models](https://link.springer.com/article/10.1007/s42952-022-00189-x)." *Journal of Korean Statistical Society*, 52:60–82.
+
+**Kahle, D.**, C. O'Neill, and J. Sommars (2020). "[A Computer Algebra System for R: Macaulay2 and the m2r Package](https://www.jstatsoft.org/article/view/v093i09)." *Journal of Statistical Software*, 93(9):1–31.
+
+Lukens, W., G. Stinchcomb, L. Nordt, **D. Kahle**, S. Driese, and J. Tubbs (2019). "[Recursive Partitioning Improves Paleosol Proxies for Rainfall](https://ajsonline.org/article/65779-recursive-partitioning-improves-paleosol-proxies-for-rainfall)." *American Journal of Science*, 319:819–845.
+
+**Kahle, D.** (2018). "Poisson Distribution." *The SAGE Encyclopedia of Educational Research, Measurement and Evaluation*. Ed. Bruce Frey.
+
+**Kahle, D.** (2018). "Bayesian Statistics." *The SAGE Encyclopedia of Educational Research, Measurement and Evaluation*. Ed. Bruce Frey.
+
+**Kahle, D.**, R. Yoshida, and L. Garcia-Puente (2018). "[Hybrid Schemes for Exact Conditional Inference in Discrete Exponential Families](https://link.springer.com/article/10.1007/s10463-017-0615-z)." *Annals of the Institute of Statistical Mathematics*, 70(5):983–1011.
+
+Mansell, A., **D. Kahle**, and D. Bellert (2017). "[Calculating RRKM Rate Constants from Vibrational Frequencies and their Dynamic Interpretation](https://www.mathematica-journal.com/2017/09/26/calculating-rrkm-rate-constants-from-vibrational-frequencies-and-their-dynamic-interpretation/)." *The Mathematica Journal*, 19:1–20.
+
+Casement, C. and **D. Kahle** (2017). "[Graphical Prior Elicitation in Univariate Models](https://www.tandfonline.com/doi/abs/10.1080/03610918.2017.1361981)." *Communications in Statistics – Simulation and Computation*, 47(10):2906–2924.
+
+Young, P., **D. Kahle**, and D. Young (2017). "[On the independence of singular multivariate skew-normal sub-vectors.](http://www.sciencedirect.com/science/article/pii/S0167715216302036)" *Statistics & Probability Letters*, 122:58–62.
+
+**Kahle, D.**, J. Stamey, F. Natanegara, K. Price, and B. Han (2016). "[Facilitated Prior Elicitation with the Wolfram CDF](https://medcraveonline.com/BBIJ/facilitated-prior-elicitation-with-the-wolfram-cdf.html)." *Biometrics & Biostatistics International Journal*, 3(6):1–6.
+
+**Kahle, D.**, P. Young, B. Greer, and D. Young (2016). "[Confidence Intervals for the Ratio of Two Poisson Rates Under One-Way Differential Misclassification Using Double Sampling](https://www.sciencedirect.com/science/article/abs/pii/S0167947315002406)." *Computational Statistics & Data Analysis*, 95:122–132.
+
+Wu, W., J. Stamey, and **D. Kahle** (2015). "[A Bayesian Approach to Account for Misclassification and Overdispersion in Observational Count Data](https://pmc.ncbi.nlm.nih.gov/articles/PMC4586634/)." *International Journal of Environmental Research and Public Health*, 12(9):10648–10661.
+
+Sides, R., **D. Kahle**, and J. Stamey (2015). "[Bayesian Sample Size Determination in Two-Sample Poisson Models.](http://medcraveonline.com/BBIJ/BBIJ-02-00023.pdf)" *Biometrics & Biostatistics International Journal*, 2(1):1–5.
+
+**Kahle, D.** (2014). "[Animating Statistics: A New Kind of Applet for Exploring Probability Distributions](https://www.tandfonline.com/doi/abs/10.1080/10691898.2014.11889700)." *Journal of Statistics Education*, 20(2):1–12.
+
+**Kahle, D.** (2013). "[mpoly: Multivariate Polynomials in R](https://journal.r-project.org/articles/RJ-2013-015/)." *The R Journal*, 5(1):162–170.
+
+**Kahle, D.** and H. Wickham (2013). "[ggmap: Spatial Visualization with ggplot2](https://journal.r-project.org/articles/RJ-2013-014/)." *The R Journal*, 5(1):144–161.
+
+Stein, R. M., B. Buzcu-Guven, L. Dueñas-Osorio, D. Subramanian, and **D. Kahle** (2013). "[How Risk Perceptions Influence Evacuations from Hurricanes and Compliance with Government Directives.](https://onlinelibrary.wiley.com/doi/pdf/10.1111/psj.12019)" *Policy Studies Journal*, 41(2):319–342.
+:::
+
+## Book Chapters
+
+::: {.papers .green}
+**Kahle, D.**, J. Seaman, and J. Stamey (2022). "An Overview of Bayesian Computation." In: Faya, P. and T. Pourmohamad (eds) *[Case Studies in Bayesian Methods for Biopharmaceutical CMC](https://www.routledge.com/Case-Studies-in-Bayesian-Methods-for-Biopharmaceutical-CMC/Faya-Pourmohamad/p/book/9781032185484)*. Chapman & Hall/CRC Biostatistics.
+
+Seaman, J., **D. Kahle**, and J. Stamey (2022). "Basic Bayesian Model Checking." In: Faya, P. and T. Pourmohamad (eds) *[Case Studies in Bayesian Methods for Biopharmaceutical CMC](https://www.routledge.com/Case-Studies-in-Bayesian-Methods-for-Biopharmaceutical-CMC/Faya-Pourmohamad/p/book/9781032185484)*. Chapman & Hall/CRC Biostatistics.
+
+**Kahle, D.** and M. Sonksen (2019). "Computational Tools." In: Natanegara, F. and M. Lakshminarayanan (eds) *[Bayesian Applications in Pharmaceutical Development](https://www.routledge.com/Bayesian-Applications-in-Pharmaceutical-Development/Lakshminarayanan-Natanegara/p/book/9781032177021)*. Chapman & Hall/CRC Statistics.
+
+Seaman, J., J. Stamey, **D. Kahle**, and S. Blair (2019). "A Brief Guide to Bayesian Model Checking." In: Natanegara, F. and M. Lakshminarayanan (eds) *[Bayesian Applications in Pharmaceutical Development](https://www.routledge.com/Bayesian-Applications-in-Pharmaceutical-Development/Lakshminarayanan-Natanegara/p/book/9781032177021)*. Chapman & Hall/CRC Statistics.
+:::
+
+## Under Review
+
+::: {.papers .gold}
+Otto, J. and **D. Kahle**. "tldrPages: Quick Documentation in the R Console."
+
+Kim, F. S., **D. Kahle**, N. S. Fleming, M. Gallaugher, T. Houston, C. Fox, B. Cahill, and R. Sturdivant. "Comparing Costs and Utilization Between Airrosti and Five Provider Types for Musculoskeletal Pain."
+
+Mitchell, C., P. James, D. Kring, and **D. Kahle**. "Impact Induced Porosity of Meteor Crater."
+:::
+
+## In Preparation
+
+::: {.papers .red}
+**Kahle, D.** and J. Hauenstein. "[Stochastic Exploration of Real Varieties via Variety Distributions](https://arxiv.org/abs/2410.16071)." arXiv:2410.16071.
+
+Morgan, N., M. Gallaugher, and **D. Kahle**. "ggclassify: Visualizing Classifiers in R."
+
+Blair, S., **D. Kahle**, and J. Seaman. "Sensitivity to Prior Misspecification in the Mode-Percentile Method of Elicitation."
+
+Young, P., **D. Kahle**, J. Patrick, and D. Young. "A Sufficient Linear-Dimension Reduction Model for Supervised Classification for Multiple Multivariate Skew-Normal Populations."
+
+**Kahle, D.** and J. Hauenstein. "Algebraic Pattern Recognition."
+
+Ma, Q. and **D. Kahle**. "Parameterizing One-Dimensional Real Varieties with Deep Learning."
+:::

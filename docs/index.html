@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -38,13 +39,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-eeb8c5f3f4e17c8fb316a566ec30bb41.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-27a64e4eaad603e849306ecba8cf1f97.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -74,19 +75,77 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:site_name" content="David Kahle">
 </head>
 
-<body class="quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">David Kahle</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./software/index.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./talks/index.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/dkahle"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/david-j-kahle"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/davidjkahle"> <i class="bi bi-twitter-x" role="img" aria-label="Twitter/X">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
   <ul>
   <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
   <li><a href="#experience" id="toc-experience" class="nav-link" data-scroll-target="#experience">Experience</a></li>
+  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
   <li><a href="#bio" id="toc-bio" class="nav-link" data-scroll-target="#bio">Bio</a></li>
   </ul>
 </nav>
@@ -131,16 +190,35 @@ ul.task-list li input[type="checkbox"] {
 <p>I am an associate professor in the <a href="http://www.baylor.edu/statistics/">Department of Statistical Science</a> at <a href="http://www.baylor.edu/">Baylor University</a>.</p>
 <p>Most of my work is in statistical computing and graphics, especially statistical software development in <a href="http://www.r-project.org/">R</a>. Current major projects involve statistical graphics (<a href="https://dustysturner.com/ggvfields/">ggvfields</a>, <a href="https://jamesotto852.github.io/ggdensity/">ggdensity</a> and others to come), algebraic statistics (<a href="https://github.com/dkahle/mpoly">mpoly</a>, <a href="https://github.com/dkahle/algstat">algstat</a>, <a href="https://github.com/dkahle/latte">latte</a>, <a href="https://github.com/coneill-math/m2r">m2r</a>) and Bayesian statistics for pharmaceutical clinical trials (proprietary). I also wrote the <a href="https://github.com/dkahle/ggmap">ggmap</a> package with Hadley Wickham and maintain it when I have time.</p>
 </section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p>Ph.D.&nbsp;in Statistics | <a href="https://statistics.rice.edu"><span style="color: #60D1F2">Rice University</span></a> | 2011</p>
-<p>M.A.&nbsp;in Statistics | <a href="https://statistics.rice.edu"><span style="color: #60D1F2">Rice University</span></a> | 2010</p>
-<p>B.A. in Mathematics | <a href="https://math.richmond.edu"><span style="color: #E76C67">University of Richmond</span></a> | 2006</p>
-</section>
 <section id="experience" class="level2">
 <h2 data-anchor-id="experience">Experience</h2>
-<p>Associate Professor of Statistical Science, <a href="https://statistics.artsandsciences.baylor.edu">Baylor University</a> | 2017 - present</p>
-<p>Assistant Professor of Statistical Science, <a href="https://statistics.artsandsciences.baylor.edu">Baylor University</a> | 2011 - 2017</p>
+<div class="timeline">
+<div class="timeline-item">
+<p><strong>Associate Professor of Statistical Science</strong><br>
+<a href="https://statistics.artsandsciences.baylor.edu">Baylor University</a> · 2017 – present</p>
+</div>
+<div class="timeline-item">
+<p><strong>Assistant Professor of Statistical Science</strong><br>
+<a href="https://statistics.artsandsciences.baylor.edu">Baylor University</a> · 2011 – 2017</p>
+</div>
+</div>
+</section>
+<section id="education" class="level2">
+<h2 data-anchor-id="education">Education</h2>
+<div class="timeline">
+<div class="timeline-item">
+<p><strong>Ph.D.&nbsp;in Statistics</strong><br>
+<a href="https://statistics.rice.edu"><span style="color: #60D1F2">Rice University</span></a> · 2011</p>
+</div>
+<div class="timeline-item">
+<p><strong>M.A.&nbsp;in Statistics</strong><br>
+<a href="https://statistics.rice.edu"><span style="color: #60D1F2">Rice University</span></a> · 2010</p>
+</div>
+<div class="timeline-item">
+<p><strong>B.A. in Mathematics</strong><br>
+<a href="https://math.richmond.edu"><span style="color: #E76C67">University of Richmond</span></a> · 2006</p>
+</div>
+</div>
 </section>
 <section id="bio" class="level2">
 <h2 data-anchor-id="bio">Bio</h2>
@@ -234,6 +312,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -554,7 +637,7 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2025 David Kahle | Made with Quarto</p>
+<p>© 2025 - 2026 David Kahle | Made with Quarto</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
