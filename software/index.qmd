@@ -66,7 +66,7 @@ Symbolic computation with multivariate polynomials in R. Provides a full framewo
 
 ---
 
-### [vnorm](https://github.com/dkahle/vnorm) <small class="text-muted">with Sonish Lamsal · in development</small>
+### [vnorm](https://github.com/sonish13/vnorm) <small class="text-muted">with Sonish Lamsal · in development</small>
 
 The variety normal distribution in R. Provides tools for working with probability distributions supported on algebraic varieties.
 
