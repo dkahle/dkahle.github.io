@@ -25,7 +25,7 @@ about:
 
 Welcome to my webpage! 
 
-I am an associate professor in the [Department of Statistical Science](http://www.baylor.edu/statistics/) at [Baylor University](http://www.baylor.edu/).
+I am a Professor in the [Department of Statistical Science](http://www.baylor.edu/statistics/) at [Baylor University](http://www.baylor.edu/).
 
 Most of my work is in statistical computing and graphics, especially statistical software development in [R](http://www.r-project.org/). Current major projects involve statistical graphics ([ggvfields](https://dustysturner.com/ggvfields/), [ggdensity](https://jamesotto852.github.io/ggdensity/) and others to come), algebraic statistics ([mpoly](https://github.com/dkahle/mpoly), [algstat](https://github.com/dkahle/algstat), [latte](https://github.com/dkahle/latte), [m2r](https://github.com/coneill-math/m2r)) and Bayesian statistics for pharmaceutical clinical trials (proprietary).  I also wrote the [ggmap](https://github.com/dkahle/ggmap) package with Hadley Wickham and maintain it when I have time.
 
@@ -35,8 +35,16 @@ Most of my work is in statistical computing and graphics, especially statistical
 
 ::: {.timeline}
 ::: {.timeline-item}
+**Professor of Statistical Science**\
+[Baylor University](https://statistics.artsandsciences.baylor.edu) · 2026 – present
+:::
+::: {.timeline-item}
 **Associate Professor of Statistical Science**\
-[Baylor University](https://statistics.artsandsciences.baylor.edu) · 2017 – present
+[Baylor University](https://statistics.artsandsciences.baylor.edu) · 2017 – 2026
+:::
+::: {.timeline-item}
+**Research Fellow**\
+[Baylor Collaborative on Hunger and Poverty](https://www.baylor.edu/hungerandpoverty/) · 2017 – present
 :::
 ::: {.timeline-item}
 **Assistant Professor of Statistical Science**\
@@ -67,7 +75,7 @@ Most of my work is in statistical computing and graphics, especially statistical
 
 ## Bio
 
-I currently hold the position of Associate Professor in the [Department of Statistical Science](https://www.baylor.edu/statistics/) at [Baylor University](https://www.baylor.edu/).  Before coming to Baylor in 2011 I earned my doctorate from the [Department of Statistics](https://statistics.rice.edu/) at [Rice University](https://www.rice.edu/) in Houston, Texas.  For my undergraduate degree I attended the [University of Richmond](https://www.richmond.edu/) and received my degree in [mathematics](https://math.richmond.edu/) working primarily with [Bill Ross](https://math.richmond.edu/faculty/wross/). 
+I currently hold the position of Professor in the [Department of Statistical Science](https://www.baylor.edu/statistics/) at [Baylor University](https://www.baylor.edu/).  Before coming to Baylor in 2011 I earned my doctorate from the [Department of Statistics](https://statistics.rice.edu/) at [Rice University](https://www.rice.edu/) in Houston, Texas.  For my undergraduate degree I attended the [University of Richmond](https://www.richmond.edu/) and received my degree in [mathematics](https://math.richmond.edu/) working primarily with [Bill Ross](https://math.richmond.edu/faculty/wross/). 
 
 During my undergraduate summers, [Javier Rojo](https://publichealth.indiana.edu/research/faculty-directory/profile.html?user=jrojo) slowly turned me into a statistician through his fantastic [REU RUSIS](https://www.stat.rice.edu/~jrojo/RUSIS/RUSIS.html).  While at Rice for my graduate studies I worked with Dr. Rojo as part of RUSIS teaching statistical computing and graphics during the summers, and he later became my doctoral thesis advisor.  A program very dear to me, I spent five years with RUSIS as a student or teacher and was the program's second Ph.D.
 

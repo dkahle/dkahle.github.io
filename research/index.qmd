@@ -9,7 +9,7 @@ My research spans statistical computing and graphics, algebraic statistics, and 
 ## Journal Articles
 
 ::: {.papers .blue}
-Turner, D., **D. Kahle**, and R. Sturdivant (2026). "[ggvfields: Vector Field Visualization in R](https://journal.r-project.org/)." *The R Journal*, accepted.
+Turner, D., **D. Kahle**, and R. Sturdivant (2026). "[ggvfields: Vector Field Visualization in R](https://journal.r-project.org/)." *The R Journal*, 18(1):228–253.
 
 Kim, F. S., **D. Kahle**, N. Fleming, M. Gallaugher, T. Houston, S. Lamsal, and R. X. Sturdivant (2025). "[Comparing Costs and Utilization Between Provider Types for Back and Neck Pain: A Cross-Sectional Study.](https://www.sciencedirect.com/science/article/pii/S016147542400071X)" *Journal of Manipulative and Physiological Therapeutics*, 48(1–5):69–78.
 

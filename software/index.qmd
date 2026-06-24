@@ -12,7 +12,7 @@ I develop and maintain open-source R packages across statistical graphics, algeb
 
 Spatial visualization with ggplot2. Downloads map tiles from Google Maps, OpenStreetMap, and Stamen Maps and renders them as ggplot2 objects. One of the most widely used R packages for spatial data visualization.
 
-[[GitHub]](https://github.com/dkahle/ggmap) [[CRAN]](https://cran.r-project.org/package=ggmap) · 7.5M downloads
+[[GitHub]](https://github.com/dkahle/ggmap) [[CRAN]](https://cran.r-project.org/package=ggmap) · 7.7M downloads
 
 ---
 
@@ -20,7 +20,7 @@ Spatial visualization with ggplot2. Downloads map tiles from Google Maps, OpenSt
 
 Interpretable bivariate density visualization for ggplot2 using highest density regions (HDRs). HDRs convey where the data actually are, rather than the density value itself, making them more natural to communicate.
 
-[[GitHub]](https://github.com/jamesotto852/ggdensity) [[CRAN]](https://cran.r-project.org/package=ggdensity) [[Docs]](https://jamesotto852.github.io/ggdensity/) · 38K downloads
+[[GitHub]](https://github.com/jamesotto852/ggdensity) [[CRAN]](https://cran.r-project.org/package=ggdensity) [[Docs]](https://jamesotto852.github.io/ggdensity/) · 44K downloads
 
 ---
 
@@ -28,15 +28,15 @@ Interpretable bivariate density visualization for ggplot2 using highest density 
 
 Vector field visualization for ggplot2. Provides geoms for visualizing vector-valued functions and fields, with applications in physics, fluid dynamics, and statistical modeling.
 
-[[GitHub]](https://github.com/dustysturner/ggvfields) [[CRAN]](https://cran.r-project.org/package=ggvfields) [[Docs]](https://dustysturner.com/ggvfields/) · 2K downloads
+[[GitHub]](https://github.com/dusty-turner/ggvfields) [[CRAN]](https://cran.r-project.org/package=ggvfields) [[Docs]](https://dustysturner.com/ggvfields/) · 3K downloads
 
 ---
 
-### [ggfunction](https://github.com/dkahle/ggfunction) <small class="text-muted">with Dusty Turner, James Otto, and Rodney Sturdivant · in development</small>
+### [ggfunction](https://github.com/dusty-turner/ggfunction) <small class="text-muted">with Dusty Turner, James Otto, and Rodney Sturdivant · in development</small>
 
 Mathematical functions and probability distributions, along with estimates, in ggplot2.
 
-[[GitHub]](https://dustysturner.com/ggfunction)
+[[GitHub]](https://github.com/dusty-turner/ggfunction)
 
 ---
 
@@ -62,7 +62,7 @@ Tools for computing and visualizing bivariate level sets in R.
 
 Symbolic computation with multivariate polynomials in R. Provides a full framework for polynomial arithmetic, calculus, evaluation, and manipulation in multiple variables.
 
-[[GitHub]](https://github.com/dkahle/mpoly) [[CRAN]](https://cran.r-project.org/package=mpoly) · 113K downloads
+[[GitHub]](https://github.com/dkahle/mpoly) [[CRAN]](https://cran.r-project.org/package=mpoly) · 118K downloads
 
 ---
 
@@ -78,7 +78,7 @@ The variety normal distribution in R. Provides tools for working with probabilit
 
 An interface from R to Macaulay2, a computer algebra system for algebraic geometry and commutative algebra. Enables polynomial ring computations from within R.
 
-[[GitHub]](https://github.com/coneill-math/m2r) [[CRAN]](https://cran.r-project.org/package=m2r) · 32K downloads
+[[GitHub]](https://github.com/coneill-math/m2r) [[CRAN]](https://cran.r-project.org/package=m2r) · 33K downloads
 
 ---
 
@@ -122,7 +122,7 @@ Tropical geometry in R. Provides tools for computing and visualizing tropical al
 
 The inverse gamma distribution in R: density, distribution, quantile, and random generation functions following base R conventions.
 
-[[GitHub]](https://github.com/dkahle/invgamma) [[CRAN]](https://cran.r-project.org/package=invgamma) · 405K downloads
+[[GitHub]](https://github.com/dkahle/invgamma) [[CRAN]](https://cran.r-project.org/package=invgamma) · 455K downloads
 
 ---
 
@@ -130,7 +130,7 @@ The inverse gamma distribution in R: density, distribution, quantile, and random
 
 The chi distribution (not chi-squared) in R: density, distribution, quantile, and random generation functions.
 
-[[GitHub]](https://github.com/dkahle/chi) [[CRAN]](https://cran.r-project.org/package=chi) · 43K downloads
+[[GitHub]](https://github.com/dkahle/chi) [[CRAN]](https://cran.r-project.org/package=chi) · 45K downloads
 
 ---
 
@@ -156,7 +156,7 @@ The beta distribution with support [l, u] in R, generalizing the standard beta d
 
 Bayesian regression with unmeasured confounders. Provides tools for fitting models that account for unmeasured confounding via informative priors.
 
-[[GitHub]](https://github.com/dkahle/unmconf) · 5K downloads
+[[GitHub]](https://github.com/dkahle/unmconf) · 6K downloads
 
 ---
 
@@ -174,7 +174,7 @@ Two-sample tests and sample size determination from a Bayesian perspective for P
 
 Threshold Indicator Taxa Analysis. Identifies community change points along environmental gradients using indicator species analysis and bootstrapping.
 
-[[CRAN]](https://cran.r-project.org/package=TITAN2) · 43K downloads
+[[CRAN]](https://cran.r-project.org/package=TITAN2) · 46K downloads
 
 ---
 
@@ -182,7 +182,7 @@ Threshold Indicator Taxa Analysis. Identifies community change points along envi
 
 Confidence intervals for the ratio of two Poisson rates under one-way differential misclassification using double sampling.
 
-[[GitHub]](https://github.com/dkahle/poisDoubleSamp) [[CRAN]](https://cran.r-project.org/package=poisDoubleSamp) · 33K downloads
+[[GitHub]](https://github.com/dkahle/poisDoubleSamp) [[CRAN]](https://cran.r-project.org/package=poisDoubleSamp) · 35K downloads
 
 ---
 
