@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "**/*.qmd"
+    # Blog is on hold; sources are kept in blog/ for when it comes back.
+    # To restore: drop this exclusion and re-add the navbar entry below.
+    - "!blog/**"
   resources:
     - cv.pdf
 
@@ -15,8 +20,6 @@ website:
         href: research/index.qmd
       - text: Software
         href: software/index.qmd
-      - text: Blog
-        href: blog/index.qmd
       - text: Talks
         href: talks/index.qmd
       - text: CV

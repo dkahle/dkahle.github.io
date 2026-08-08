@@ -1,6 +1,9 @@
 .Rproj.user
 initializing-website.sh
 .DS_Store
+.Rhistory
 /.quarto/
+/_site/
+/index_files/
 
 **/*.quarto_ipynb
