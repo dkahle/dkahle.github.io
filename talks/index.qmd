@@ -4,15 +4,210 @@ toc: true
 toc-title: ""
 ---
 
-Selected conference presentations, invited talks, and seminars.
+Conference presentations, invited talks, and seminars, listed in reverse chronological order.
 
-## 2025
+## Upcoming
 
-<!-- Format:
-"Title." *Conference or Venue*, Location, Month Year.
-[[Slides]](url) [[Recording]](url)
--->
+::: {.papers .red}
+**Kahle, D.** "TBD." Sampling and Data in Algebraic Geometry, Institute for Computational and Experimental Research in Mathematics (ICERM), Brown University, Providence, Rhode Island, USA, April 5–9, 2027.
 
-## 2024
+**Kahle, D.** and S. Lamsal. "vnorm: A Monte Carlo Platform for Variety Distributions in R." The 9th Annual Meeting of SIAM Texas-Louisiana Section, Southern Methodist University, Dallas, Texas, USA, October 30–November 1, 2026.
+:::
 
-## Earlier
+## Invited Presentations
+
+::: {.papers .gold}
+**Kahle, D.** "Experiments with Variety Distributions and Variety Regression." The 7th Annual Meeting of SIAM Texas-Louisiana Section, Baylor University, Waco, Texas, USA, October 11–13, 2024.
+
+**Kahle, D.**, J. Seaman, and J. Stamey. "An Intuitive Introduction to Bayesian Computation." Bayesian Statistics Seminar Series, Eli Lilly & Company, Online, December 7, 2023.
+
+**Kahle, D.** and J. Hauenstein. "Variety Distributions and Applications." Seminar, Department of Statistics and Data Science, Southern Methodist University, Dallas, Texas, USA, November 17, 2023.
+
+**Kahle, D.** and J. Hauenstein. "An Invitation to Algebraic Statistics via Variety Distributions." Banquet speaker, Southern Regional Council on Statistics Summer Research Conference, Baylor University, Waco, Texas, USA, June 12–14, 2023.
+
+**Kahle, D.** "Practical Strategies for Bayesian Computation." Eli Lilly & Company, Online, May 27, 2022.
+
+Seaman, J., J. Stamey, and **D. Kahle**. "A Brief Introduction to Bayesian Methods." Eli Lilly & Company, Online, September 29, 2021.
+
+Seaman, J., J. Stamey, and **D. Kahle**. "Priors for Variance Components and Covariance Matrices." Eli Lilly & Company, Online, July 30, 2021.
+
+Seaman, J., J. Stamey, and **D. Kahle**. "An Introduction to Bayesian Meta-Analysis and Network Meta-Analysis II." Eli Lilly & Company, Online, April 20, 2021.
+
+Seaman, J., J. Stamey, and **D. Kahle**. "An Introduction to Bayesian Meta-Analysis and Network Meta-Analysis I." Eli Lilly & Company, Online, March 16, 2021.
+
+Seaman, J., J. Stamey, and **D. Kahle**. "A Brief Introduction to Bayesian Hierarchical Modeling." Eli Lilly & Company, Online, October 20, 2020.
+
+Seaman, J., J. Stamey, and **D. Kahle**. "A Brief Introduction to Bayesian Methods." Eli Lilly & Company, Online, March 24, 2020.
+
+**Kahle, D.** and Q. Ma. "Exploring Varieties – A Practical Guide." The 2nd Annual Meeting of SIAM Texas-Louisiana Section, Southern Methodist University, Dallas, Texas, USA, November 1–3, 2019. [[Slides/code]](https://github.com/dkahle/2019-SIAM-TX-LA)
+
+**Kahle, D.** and Q. Ma. "Parameterizing Algebraic Curves using Autoencoders." AMS Special Session on Applications of Algebra and Geometry, Fall Central Sectional Meeting, University of Wisconsin–Madison, Madison, Wisconsin, USA, September 14–15, 2019.
+
+Beattie, S., M. Gamalo, **D. Kahle**, and A. Nikooienejad. "Statistical Inference in the 21st Century: A World Beyond *p* < .05." Panelist, organized by Richard Payne. Bayesian Seminar Series, Eli Lilly & Company, Indianapolis, Indiana, USA, July 26, 2019.
+
+**Kahle, D.**, J. Hauenstein, and Q. Ma. "Stochastic Exploration of Real Varieties and Applications." Summer School on Randomness and Learning in Non-Linear Algebra, Max Planck Institute for Mathematics in the Sciences, Leipzig, Saxony, Germany, July 1–5, 2019. [[Slides/code]](https://github.com/dkahle/2019-MPI)
+
+**Kahle, D.** and J. Hauenstein. "Stochastic Exploration of Real Varieties." Workshop on Nonlinear Algebra in Applications, Institute for Computational and Experimental Research in Mathematics (ICERM), Brown University, Providence, Rhode Island, USA, November 12–16, 2018. [[Recording]](https://brown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4d4401a9-961a-40f3-ae56-a99601514ab6)
+
+Seaman, J., **D. Kahle**, and J. Stamey. "An Overview of Bayesian Statistics for Non-statisticians." Eli Lilly & Company, Indianapolis, Indiana, USA, October 10, 2018.
+
+**Kahle, D.** "Algebraic Statistics through R." Department of Statistics Colloquium, Pennsylvania State University, State College, Pennsylvania, USA, April 19, 2018.
+
+Seaman, J., J. Stamey, and **D. Kahle**. "A Brief Introduction to Bayesian Hierarchical Models." Eli Lilly & Company, Indianapolis, Indiana, USA, April 10, 2018.
+
+**Kahle, D.** "Research in Statistics." Baylor Undergraduate Research in Science and Technology (BURST), Baylor University, Waco, Texas, USA, April 5, 2018.
+
+**Kahle, D.** "Becoming a Statistician." Baylor Undergraduate Research in Science and Technology (BURST), Baylor University, Waco, Texas, USA, November 16, 2017.
+
+**Kahle, D.**, C. O'Neill, and J. Sommars. "m2r: Macaulay2 in R." AMS Special Session on Applicable and Computational Algebraic Geometry, Fall Central Sectional Meeting, University of North Texas, Denton, Texas, USA, September 9–10, 2017. [[Slides]](https://github.com/dkahle/2017-AMS-Sectional-Talk)
+
+**Kahle, D.** "Algebraic Statistics in R – A State of the Union." SIAM 2017 Conference on Applied Algebraic Geometry, Georgia Institute of Technology, Atlanta, Georgia, USA, July 31–August 4, 2017. [[Slides]](https://github.com/dkahle/2017-SIAM-Talk)
+
+**Kahle, D.** "An Introduction to Applied Algebraic Statistics through R." Statistics Colloquium Lecture, Baylor University, Waco, Texas, USA, October 6, 2016. [[Slides]](https://www.dropbox.com/scl/fi/g9on7f8mx26a48hf2ahm0/2016-Baylor-algstat.pdf?rlkey=4hcxwlzvhihbuo7fw46zr387n&dl=0)
+
+**Kahle, D.** "glmcmp 2.0: Conditional Means Priors in R." Eli Lilly & Company Science Driven Adaptive Program (SDAP) online meeting on prior elicitation tools, October 5, 2016.
+
+**Kahle, D.** "Simple Algebraic Regression." 2016 Society for Industrial and Applied Mathematics (SIAM) Annual Meeting, The Westin Boston Waterfront, Boston, Massachusetts, USA, July 11–15, 2016. [[Slides]](https://www.dropbox.com/scl/fi/8q0b670ay7nmfb9u35sva/SIAM-2016.pdf?rlkey=gmsgx5dmox3wzb506btq6flus&dl=0)
+
+**Kahle, D.**, R. Yoshida, and L. Garcia-Puente. "Applied Algebraic Statistics in R: The algstat Package." 2016 Mathematics Research Community, Snowbird Ski and Summer Resort, Snowbird, Utah, USA, June 12–18, 2016.
+
+**Kahle, D.** "Reflections on Big Data: What it is, why you should care, and why you shouldn't." Baylor Undergraduate Research in Science and Technology (BURST), Baylor University, Waco, Texas, USA, November 19, 2015.
+
+**Kahle, D.** and M. Sonksen. "Getting Started with glmcmp." Eli Lilly & Company Bayesian Educational Training (BET) Forum online meeting, September 25, 2015.
+
+**Kahle, D.** and M. Sonksen. "Getting Started with glmcmp." Eli Lilly & Company Bayesian Central Hub online meeting, August 28, 2015.
+
+**Kahle, D.** "glmcmp Nonlinear Programming." Eli Lilly & Company Science Driven Adaptive Program (SDAP) online meeting on prior elicitation tools, August 26, 2015.
+
+**Kahle, D.**, R. Yoshida, and L. Garcia-Puente. "Applied Algebraic Statistics in R with algstat." SIAM 2015 Conference on Applied Algebraic Geometry, National Institute for Mathematical Sciences, Daejeon, Hoseo, South Korea, August 3–7, 2015.
+
+**Kahle, D.** "Recent Advances in Visualizing Spatial Data in R with ggmap." 45th Symposium on the Interface of Computing Science and Statistics: Data Science, Waterfront Place Hotel, Morgantown, West Virginia, USA, June 10–13, 2015. [[Slides]](https://www.dropbox.com/scl/fi/s2r1zrabph20vyw5uj04g/Interface-2015.pdf?rlkey=fddiisemqdftu1gwx7vgqpbgw&dl=0)
+
+**Kahle, D.** and J. Stamey. "Reference Priors in glmcmp." Eli Lilly & Company Science Driven Adaptive Program (SDAP) online meeting, April 17, 2015.
+
+**Kahle, D.** and J. Stamey. "Induced Priors on Unelicited Scenarios: Preliminary Results for a Hypothetical Pilot Study." Eli Lilly & Company Science Driven Adaptive Program (SDAP) online meeting, February 20, 2015.
+
+**Kahle, D.** "algstat: Algebraic Statistics for the Masses." University of Kentucky, Lexington, Kentucky, USA, September 11, 2014. [[Slides]](https://www.dropbox.com/scl/fi/tgz1xlq26rnbbd15wsrq5/2014-UK.pdf?rlkey=nfwjn4rx5nft6a733ro7xj6td&dl=0)
+
+Seaman, J., J. Stamey, and **D. Kahle**. "A Brief Introduction to Bayesian Methods." Eli Lilly & Company, Indianapolis, Indiana, USA, November 18, 2014.
+
+**Kahle, D.** and J. Stamey. "Logistic Regression with Conditional Means Priors and glmcmp." Eli Lilly & Company Science Driven Adaptive Program (SDAP) online meeting, June 27, 2014.
+
+**Kahle, D.** and L. Garcia-Puente. "Algebraic Statistics in R: Discrete Multivariate Analysis and the algstat Package." Southern Regional Council on Statistics Summer Research Conference, Hotel Galvez, Galveston, Texas, USA, June 1–4, 2014. [[Poster]](https://www.dropbox.com/scl/fi/0lzjkc8cfkte0let5ci5f/SRCOS-2014-Poster.pdf?rlkey=mb0704ljlzrhtnytdpmu4txu7&dl=0)
+
+**Kahle, D.** "Can you see me now? A consumers' guide to data visualization." Together at the Table: Hunger Summit at Baylor University, Baylor University, Waco, Texas, USA, October 24–25, 2013. [[Slides]](https://www.dropbox.com/scl/fi/a6w51lt6c16s2wyv8dlza/Hunger-Summit-2013-Hi-Res.pdf?rlkey=bk874n1hbbq6dpojpdqri6fda&dl=0)
+
+**Kahle, D.** "Introducing Algebraic Statistics." Stephen F. Austin State University, Nacogdoches, Texas, USA, October 7, 2013. [[Slides]](https://www.dropbox.com/scl/fi/tds8k5qm7k5693222itmy/SFA-2013.pdf?rlkey=xb4lgktzsibse28j0sbrky4xn&dl=0)
+
+**Kahle, D.** "Introducing Algebraic Statistics." Southern Regional Council on Statistics Summer Research Conference, Montgomery Bell State Park, Burns, Tennessee, USA, June 2–5, 2013. [[Slides]](https://www.dropbox.com/scl/fi/ifmdp8xsi19f7htnjmkp7/SRCOS-2013-Slides.pdf?rlkey=9x5fvgd21d9sno9gpa7rmqw9e&dl=0)
+
+**Kahle, D.** "The Grammar of Graphics and Spatial Visualization in R." Sam Houston State University, Huntsville, Texas, USA, October 3, 2012. [[Slides]](https://www.dropbox.com/scl/fi/i5497ftzgi68olaw5khlx/Sam-Houston-ggmap.pdf?rlkey=13w26kr806xw273h1qvi7m9rv&dl=0)
+
+**Kahle, D.** "The Algebraic Side of Contingency Tables." 2012 Conference of Texas Statisticians, Lamar University, Beaumont, Texas, USA, March 3, 2012. [[Slides]](https://www.dropbox.com/scl/fi/0gixu7cxlgpv681tmteur/COTS-2012.pdf?rlkey=4phy58umlzai4unw3pjr93p1m&dl=0)
+:::
+
+## Conference Presentations
+
+::: {.papers .blue}
+Kim, F. S., **D. Kahle**, N. Fleming, M. Gallaugher, T. Houston, C. Fox, B. Cahill, and R. Sturdivant. "Comparing Costs and Utilization Between Airrosti and Five Provider Types for Musculoskeletal Pain." [U.S. Army Medical Center of Excellence Graduate School Research and Education Symposium 2025](https://medcoe.army.mil/gsres), UT Health Science Center, San Antonio, Texas, USA, June 5–6, 2025.
+
+Miyakawa, E. and **D. Kahle**. "A Practical Comparison of Bayesian Computing Platforms in R." [2025 Southwest Data Science Conference](https://sdsc.research.baylor.edu), Baylor University, Waco, Texas, USA, March 21, 2025.
+
+Hebdon, R., J. Stamey, **D. Kahle**, and X. Zhang. "unmconf: An R Package for Bayesian Regression with Unmeasured Confounders." [International Society for Pharmacoepidemiology (ISPE) 2024 Mid-Year Meeting](https://www.pharmacoepi.org/meetings/2024mym/), Hilton Orlando Lake Buena Vista, Lake Buena Vista, Florida, USA, April 15, 2024. (Poster)
+
+Lamsal, S. and **D. Kahle**. "In-Game Win Prediction Models for Cricket." [2024 Southwest Data Science Conference](https://sdsc.research.baylor.edu), Baylor University, Waco, Texas, USA, March 22, 2024. (Poster)
+
+Lamsal, S. and **D. Kahle**. "In-Game Win Prediction Models for Cricket." [2024 American Statistical Association Conference on Statistical Practice](https://ww2.amstat.org/meetings/csp/2024/), The Ritz Carlton, New Orleans, Louisiana, USA, February 27–29, 2024. (Poster)
+
+Otto, J. and **D. Kahle**. "tldrPages: Quick Documentation in the R Console." 2023 Joint Statistical Meetings, Metro Toronto Convention Centre, Toronto, Ontario, Canada, August 5–10, 2023.
+
+**Kahle, D.** and J. Hauenstein. "Variety Distributions and Applications." [Computations and Data in Algebraic Statistics](https://www.birs.ca/events/2023/5-day-workshops/23w5130), Banff International Research Station for Mathematical Research and Discovery, Casa Matemática Oaxaca, San Felipe del Agua, Oaxaca, Mexico, May 14–19, 2023.
+
+Otto, J., P. Faya, J. Stamey, and **D. Kahle**. "A Bayesian Approach to Deming Regression with Pharmaceutical Applications." Southern Regional Council on Statistics Summer Research Conference, Villas by the Sea, Jekyll Island, Georgia, USA, October 2–5, 2022.
+
+Otto, J. and **D. Kahle**. "ggdensity: Improved Bivariate Density Visualization in R." 2022 Joint Statistical Meetings, Walter E. Washington Convention Center, Washington, D.C., USA, August 6–11, 2022.
+
+Otto, J. and **D. Kahle**. "ggdensity: Improved Bivariate Density Visualization in R." 2022 useR!, Online, June 20–23, 2022.
+
+Otto, J. and **D. Kahle**. "ggdensity: Improved Bivariate Density Visualization in R." 2022 Symposium on Data Science & Statistics: Beyond Big Data — Influencing Science, Technology, and Society, The Westin Pittsburgh, Pittsburgh, Pennsylvania, USA, June 7–10, 2022.
+
+Ma, Q. and **D. Kahle**. "Model Selection in Algebraic Pattern Recognition." 2021 Joint Mathematics Meetings, Washington State Convention Center, Seattle, Washington, USA, August 7–12, 2021.
+
+Ma, Q. and **D. Kahle**. "Parameterizing Varieties with Deep Learning." The 2nd Annual Meeting of SIAM Texas-Louisiana Section, Southern Methodist University, Dallas, Texas, USA, November 1–3, 2019.
+
+Innerst, G. and **D. Kahle**. "An Algebraic Approach to Minimum Chi-Square Estimation." 2019 Joint Mathematics Meetings, Baltimore Convention Center, Baltimore, Maryland, USA, January 16–19, 2019.
+
+Hossu, P., C. Sun, G. Innerst, R. Hebdon, and **D. Kahle**. "Algebraic Curve Fitting in R." 2019 Joint Mathematics Meetings, Baltimore Convention Center, Baltimore, Maryland, USA, January 16–19, 2019. (Poster; Award: Outstanding Poster)
+
+Innerst, G. and **D. Kahle**. "An Algebraic Approach to Minimum Chi-Square Estimation." 2018 Society for the Advancement of Chicanos and Native Americans in Science (SACNAS) National Diversity in STEM Conference, Henry B. González Convention Center, San Antonio, Texas, USA, October 11–13, 2018. (Poster)
+
+Hebdon, R., P. Hossu, G. Innerst, C. Sun, and **D. Kahle**. "Algebraic Curve Fitting in R." 2018 Society for the Advancement of Chicanos and Native Americans in Science (SACNAS) National Diversity in STEM Conference, Henry B. González Convention Center, San Antonio, Texas, USA, October 11–13, 2018. (Poster)
+
+Hossu, P., C. Sun, G. Innerst, R. Hebdon, and **D. Kahle**. "A Geometrically-Inspired Discrepancy for Categorical Probability Distributions." Annual College of Science Poster Day, Illinois Institute of Technology, Chicago, Illinois, USA, August 17, 2018. (Poster; Award: Best Applied Math Poster)
+
+Lukens, W. E., G. Stinchcomb, L. Nordt, S. Driese, **D. Kahle**, and J. Tubbs. "A Re-evaluation of Paleosol Elemental Proxies for Climate Through Cross-validation and Machine Learning." 2018 Goldschmidt Conference, Hynes Convention Center, Boston, Massachusetts, USA, August 12–21, 2018.
+
+Innerst, G., D. Kim, P. Gao, and **D. Kahle**. "MCMC Strategies to Enhance Exact Conditional Inference for Discrete Exponential Families." 2017 Society for the Advancement of Chicanos and Native Americans in Science (SACNAS) National Diversity in STEM Conference, Salt Palace Convention Center, Salt Lake City, Utah, USA, October 19–21, 2017.
+
+Kim, D., P. Gao, G. Innerst, and **D. Kahle**. "Accelerating Exact Conditional Inference in Discrete Exponential Family Models." 2017 Society for the Advancement of Chicanos and Native Americans in Science (SACNAS) National Diversity in STEM Conference, Salt Palace Convention Center, Salt Lake City, Utah, USA, October 19–21, 2017.
+
+**Kahle, D.**, J. Stamey, M. Sonksen, and K. Price. "glmcmp: Prior Elicitation in R." 2017 Joint Statistical Meetings, Topic Contributed Session: What Do the Experts Believe? Leveraging Expert Knowledge to Develop Robust Informative Priors to Aid Decision Making in Drug and Medical Device Development, Baltimore Convention Center, Baltimore, Maryland, USA, July 29–August 3, 2017.
+
+Casement, C. and **D. Kahle**. "Lineup-Style Methods for Graphical Prior Elicitation." 2016 Conference of Texas Statisticians, Trinity University, San Antonio, Texas, USA, April 8–9, 2016. (Award: Best Interdisciplinary Poster)
+
+Casement, C. and **D. Kahle**. "Prior Elicitation via a Rorschach-Style Graphical Procedure." 2016 Eastern North American Meetings (ENAR) of the International Biometric Society, JW Marriott, Austin, Texas, USA, March 6–9, 2016. (Poster)
+
+Blair, S., **D. Kahle**, and J. Seaman. "Sensitivity in Prior Elicitation." 2016 Eastern North American Meetings (ENAR) of the International Biometric Society, JW Marriott, Austin, Texas, USA, March 6–9, 2016. (Poster)
+
+Garcia-Puente, L. and **D. Kahle**. "algstat: An R Package for Algebraic Statistics." Algebraic Statistics 2015, Università degli Studi di Genova, Genoa, Italy, June 8–11, 2015. (Tutorial)
+
+Young, P., **D. Kahle**, and D. Young. "Confidence Intervals for the Ratio of Two Poisson Rates Under Differential Misclassification Using Double Sampling." Southern Regional Council on Statistics Summer Research Conference, Courtyard Marriott, Carolina Beach, North Carolina, USA, June 7–10, 2015. (Poster)
+
+**Kahle, D.**, R. Yoshida, and L. Garcia-Puente. "Sampling From Discrete Exponential Families Conditional on Their Sufficient Statistics." Southern Regional Council on Statistics Summer Research Conference, Courtyard Marriott, Carolina Beach, North Carolina, USA, June 7–10, 2015. (Poster)
+
+Garcia-Puente, L. and **D. Kahle**. "algstat: An R Package for Algebraic Statistics." Joint Workshop on Limit Theorems and Algebraic Statistics, Institute of Information Theory and Automation, Academy of Sciences of the Czech Republic, Prague, Czech Republic, August 25–29, 2014.
+
+Cheng, J., **D. Kahle**, and J. Seaman. "Eliciting Informative Priors for Bayesian Hurdle Models." 2014 Joint Statistical Meetings: Global Impact — Past, Present, and Future, Boston Convention and Exhibition Center, Boston, Massachusetts, USA, August 2–7, 2014. (Poster)
+
+**Kahle, D.** and L. Garcia-Puente. "Algebraic Statistics in R: Markov Bases." 2014 NIMS Thematic Program on Applied Algebraic Geometry: Algebraic Statistics, National Institute for Mathematical Sciences, Daejeon, Hoseo, South Korea, July 14–17, 2014.
+
+Garcia-Puente, L. and **D. Kahle**. "Markov Bases for Noncommutative Fourier Analysis of Partially Ranked Data." as2014: Algebraic Statistics Conference, Illinois Institute of Technology, Chicago, Illinois, USA, May 19–22, 2014.
+
+**Kahle, D.** "Visualizing Big Data in the Introductory Course." The Second Biennial Electronic Conference on Teaching Statistics (eCOTS), Online, May 19–23, 2014. (Screencast recording)
+
+Cheng, J., J. Seaman, and **D. Kahle**. "Priors for Bayesian Hurdle Models." 2014 Eastern North American Meetings (ENAR) of the International Biometric Society, Baltimore Marriott Waterfront, Baltimore, Maryland, USA, March 16–19, 2014. (Poster)
+
+Cheng, J., **D. Kahle**, and J. Seaman. "Eliciting Priors for Hurdle Models with Shared Covariates." Women in Statistics Conference, Embassy Suites, Cary, North Carolina, USA, March 15–17, 2014. (Poster)
+
+**Kahle, D.**, J. Stamey, K. Price, F. Natanegara, and B. Han. "Advances in Facilitated Prior Elicitation." 2013 Joint Statistical Meetings, Topic Contributed Session: Bayesian Computations — Challenges, Solutions, and Implementations in Medical Product Development, Palais des Congrès de Montréal, Montréal, Québec, Canada, August 3–8, 2013.
+
+Garcia-Puente, L. and **D. Kahle**. "Identifiability of Structural Equation Models on 6 Random Variables." 2013 Society for Industrial and Applied Mathematics (SIAM) Conference on Applied Algebraic Geometry, Colorado State University, Fort Collins, Colorado, USA, August 1–4, 2013.
+
+Warnick, R. and **D. Kahle**. "Interactive Modules as Tools for Illustrating Statistical Concepts." 2013 URSA Scholars' Week, Baylor University, Waco, Texas, USA, April 8–11, 2013.
+
+Warnick, R. and **D. Kahle**. "Interactive Modules as Tools for Illustrating Statistical Concepts." 2013 American Statistical Association Conference on Statistical Practice, Sheraton New Orleans Hotel, New Orleans, Louisiana, USA, February 21–23, 2013. (Poster)
+
+**Kahle, D.** and H. Wickham. "ggmap: Interfacing ggplot2 and RgoogleMaps." The 8th International R Users Meeting, Vanderbilt University, Nashville, Tennessee, USA, June 12–15, 2012.
+
+**Kahle, D.** and H. Wickham. "ggmap: Spatial Visualization with ggplot2." Southern Regional Council on Statistics Summer Research Conference, Jekyll Island, Georgia, USA, June 2–6, 2012. (Poster)
+
+**Kahle, D.** "mpoly: Multivariate Polynomials in R." Algebraic Statistics in the Alleghenies, The Pennsylvania State University, University Park, Pennsylvania, USA, May 16–18, 2012. (Poster)
+
+**Kahle, D.** "mpoly: Multivariate Polynomials in R." 43rd Symposium on the Interface of Computing Science and Statistics: Future of Statistical Computing — Internet Scale Data, Flexible Modeling, and Visualization, Rice University, Houston, Texas, USA, May 16–18, 2012.
+
+Guven, B., L. Dueñas-Osorio, R. M. Stein, D. Subramanian, J. Salazar, and **D. Kahle**. "Storm Risk Calculator for the City of Houston." Presentation before the City of Houston Office of Emergency Management, City Hall, Houston, Texas, USA, May 3, 2012.
+
+Guven, B., L. Dueñas-Osorio, R. M. Stein, D. Subramanian, and **D. Kahle**. "Storm Risk Calculator for the City of Houston." 2012 National Hurricane Conference, Orlando, Florida, USA, March 26–29, 2012.
+
+**Kahle, D.**, L. Dueñas-Osorio, D. Subramanian, and R. M. Stein. "A Comparison of Hurricane Induced Power Outage Models: Component vs. Statistical Models." 2011 National Hurricane Conference, Atlanta, Georgia, USA, April 18–22, 2011.
+
+**Kahle, D.** "Minimum Distance Estimation for Contingency Table Models." 2010 Society for the Advancement of Chicanos and Native Americans in Science (SACNAS) National Conference, Anaheim, California, USA, September 29–October 3, 2010. (Poster)
+
+**Kahle, D.** "Advances in Contingency Table Model Estimation." 2010 Pan-American Advanced Studies Institute: Cutting-edge Topics in Theoretical Statistics and Applications in Genetics and Bioinformatics, Centro de Investigación en Matemáticas, Guanajuato, Mexico, May 2–8, 2010. (Poster)
+
+**Kahle, D.** "Computational Survival Analysis with R." Pan-American Advanced Studies Institute: Mathematical Models in Population Dynamics, Universidad de El Salvador (UES), San Salvador, El Salvador, February 24–26, 2010.
+
+**Kahle, D.** and D. Homrighausen. "An Investigation into Statistical Tests for Stochastic Dominance with Applications to Economic Decision Theory." 2006 Joint Mathematics Meetings, San Antonio, Texas, USA, January 12–15, 2006. (Poster)
+
+**Kahle, D.** and D. Homrighausen. "An Investigation into Statistical Tests for Stochastic Dominance with Applications to Economic Decision Theory." 2005 Shenandoah Undergraduate Mathematics and Statistics Conference, James Madison University, Harrisonburg, Virginia, USA, November 12, 2005.
+:::

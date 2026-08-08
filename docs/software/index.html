@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ec637c3e3a86dac58f4764eef3543a95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cd1eae078b67efe6a96f7fd1e95d9af1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -169,13 +172,14 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#invgamma-with-james-stamey" id="toc-invgamma-with-james-stamey" class="nav-link" data-scroll-target="#invgamma-with-james-stamey">invgamma <small class="text-muted">with James Stamey</small></a></li>
   <li><a href="#chi" id="toc-chi" class="nav-link" data-scroll-target="#chi">chi</a></li>
-  <li><a href="#dirchlet" id="toc-dirchlet" class="nav-link" data-scroll-target="#dirchlet">dirchlet</a></li>
+  <li><a href="#dirichlet" id="toc-dirichlet" class="nav-link" data-scroll-target="#dirichlet">dirichlet</a></li>
   <li><a href="#betalu" id="toc-betalu" class="nav-link" data-scroll-target="#betalu">betalu</a></li>
   </ul></li>
   <li><a href="#bayesian-statistics" id="toc-bayesian-statistics" class="nav-link" data-scroll-target="#bayesian-statistics">Bayesian Statistics</a>
   <ul class="collapse">
   <li><a href="#unmconf-with-ryan-hebdon-james-stamey-and-xiao-zhang" id="toc-unmconf-with-ryan-hebdon-james-stamey-and-xiao-zhang" class="nav-link" data-scroll-target="#unmconf-with-ryan-hebdon-james-stamey-and-xiao-zhang">unmconf <small class="text-muted">with Ryan Hebdon, James Stamey, and Xiao Zhang</small></a></li>
   <li><a href="#bayesrates-with-james-stamey-and-ryan-sides" id="toc-bayesrates-with-james-stamey-and-ryan-sides" class="nav-link" data-scroll-target="#bayesrates-with-james-stamey-and-ryan-sides">bayesRates <small class="text-muted">with James Stamey and Ryan Sides</small></a></li>
+  <li><a href="#interactive-graphical-elicitation-tool-with-christopher-casement" id="toc-interactive-graphical-elicitation-tool-with-christopher-casement" class="nav-link" data-scroll-target="#interactive-graphical-elicitation-tool-with-christopher-casement">Interactive Graphical Elicitation Tool <small class="text-muted">with Christopher Casement</small></a></li>
   </ul></li>
   <li><a href="#applied-statistics" id="toc-applied-statistics" class="nav-link" data-scroll-target="#applied-statistics">Applied Statistics</a>
   <ul class="collapse">
@@ -214,6 +218,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I develop and maintain open-source R packages across statistical graphics, algebraic statistics, Bayesian methods, and more. Source code is on <a href="https://github.com/dkahle">GitHub</a>.</p>
+<p><small class="text-muted">Download counts are all-time CRAN downloads as of August 2026, collected with <a href="https://cran.r-project.org/package=cranlogs">cranlogs</a>.</small></p>
 <section id="statistical-graphics" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-graphics">Statistical Graphics</h2>
 <section id="ggmap-with-hadley-wickham" class="level3">
@@ -225,31 +230,31 @@ ul.task-list li input[type="checkbox"] {
 <section id="ggdensity-with-james-otto" class="level3">
 <h3 class="anchored" data-anchor-id="ggdensity-with-james-otto"><a href="https://jamesotto852.github.io/ggdensity/">ggdensity</a> <small class="text-muted">with James Otto</small></h3>
 <p>Interpretable bivariate density visualization for ggplot2 using highest density regions (HDRs). HDRs convey where the data actually are, rather than the density value itself, making them more natural to communicate.</p>
-<p><a href="https://github.com/jamesotto852/ggdensity">[GitHub]</a> <a href="https://cran.r-project.org/package=ggdensity">[CRAN]</a> <a href="https://jamesotto852.github.io/ggdensity/">[Docs]</a> · 44K downloads</p>
+<p><a href="https://github.com/jamesotto852/ggdensity">[GitHub]</a> <a href="https://cran.r-project.org/package=ggdensity">[CRAN]</a> <a href="https://jamesotto852.github.io/ggdensity/">[Docs]</a> · 46K downloads</p>
 <hr>
 </section>
 <section id="ggvfields-with-dusty-turner-and-rodney-sturdivant" class="level3">
 <h3 class="anchored" data-anchor-id="ggvfields-with-dusty-turner-and-rodney-sturdivant"><a href="https://dustysturner.com/ggvfields/">ggvfields</a> <small class="text-muted">with Dusty Turner and Rodney Sturdivant</small></h3>
-<p>Vector field visualization for ggplot2. Provides geoms for visualizing vector-valued functions and fields, with applications in physics, fluid dynamics, and statistical modeling.</p>
-<p><a href="https://github.com/dusty-turner/ggvfields">[GitHub]</a> <a href="https://cran.r-project.org/package=ggvfields">[CRAN]</a> <a href="https://dustysturner.com/ggvfields/">[Docs]</a> · 3K downloads</p>
+<p>Vector field visualization for ggplot2. Provides geoms for visualizing vector-valued functions and fields, with applications in physics, fluid dynamics, and statistical modeling. Described in <em>The R Journal</em> (2026).</p>
+<p><a href="https://github.com/dusty-turner/ggvfields">[GitHub]</a> <a href="https://cran.r-project.org/package=ggvfields">[CRAN]</a> <a href="https://dustysturner.com/ggvfields/">[Docs]</a> · 3.6K downloads</p>
 <hr>
 </section>
 <section id="ggfunction-with-dusty-turner-james-otto-and-rodney-sturdivant-in-development" class="level3">
 <h3 class="anchored" data-anchor-id="ggfunction-with-dusty-turner-james-otto-and-rodney-sturdivant-in-development"><a href="https://github.com/dusty-turner/ggfunction">ggfunction</a> <small class="text-muted">with Dusty Turner, James Otto, and Rodney Sturdivant · in development</small></h3>
-<p>Mathematical functions and probability distributions, along with estimates, in ggplot2.</p>
+<p>Mathematical functions and probability distributions, along with estimates, in ggplot2. An accompanying paper is under review.</p>
 <p><a href="https://github.com/dusty-turner/ggfunction">[GitHub]</a></p>
 <hr>
 </section>
 <section id="ggclassify-with-nathaniel-morgan-and-michael-gallaugher-in-development" class="level3">
-<h3 class="anchored" data-anchor-id="ggclassify-with-nathaniel-morgan-and-michael-gallaugher-in-development"><a href="https://github.com/dkahle/ggclassify">ggclassify</a> <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small></h3>
+<h3 class="anchored" data-anchor-id="ggclassify-with-nathaniel-morgan-and-michael-gallaugher-in-development"><a href="https://github.com/nathaniel-morgan/ggclassify">ggclassify</a> <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small></h3>
 <p>Visualizing classifiers in R. Extends ggplot2 with tools for displaying decision boundaries and classification regions from statistical and machine learning models.</p>
-<p><a href="https://github.com/dkahle/ggclassify">[GitHub]</a></p>
+<p><a href="https://github.com/nathaniel-morgan/ggclassify">[GitHub]</a></p>
 <hr>
 </section>
 <section id="biroot-with-nathaniel-morgan-and-michael-gallaugher-in-development" class="level3">
-<h3 class="anchored" data-anchor-id="biroot-with-nathaniel-morgan-and-michael-gallaugher-in-development"><a href="https://github.com/dkahle/biroot">biroot</a> <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small></h3>
+<h3 class="anchored" data-anchor-id="biroot-with-nathaniel-morgan-and-michael-gallaugher-in-development"><a href="https://github.com/nathaniel-morgan/biroot">biroot</a> <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small></h3>
 <p>Tools for computing and visualizing bivariate level sets in R.</p>
-<p><a href="https://github.com/dkahle/biroot">[GitHub]</a></p>
+<p><a href="https://github.com/nathaniel-morgan/biroot">[GitHub]</a></p>
 <hr>
 </section>
 </section>
@@ -258,19 +263,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="mpoly" class="level3">
 <h3 class="anchored" data-anchor-id="mpoly"><a href="https://github.com/dkahle/mpoly">mpoly</a></h3>
 <p>Symbolic computation with multivariate polynomials in R. Provides a full framework for polynomial arithmetic, calculus, evaluation, and manipulation in multiple variables.</p>
-<p><a href="https://github.com/dkahle/mpoly">[GitHub]</a> <a href="https://cran.r-project.org/package=mpoly">[CRAN]</a> · 118K downloads</p>
+<p><a href="https://github.com/dkahle/mpoly">[GitHub]</a> <a href="https://cran.r-project.org/package=mpoly">[CRAN]</a> · 121K downloads</p>
 <hr>
 </section>
 <section id="vnorm-with-sonish-lamsal-in-development" class="level3">
-<h3 class="anchored" data-anchor-id="vnorm-with-sonish-lamsal-in-development"><a href="https://github.com/sonish13/vnorm">vnorm</a> <small class="text-muted">with Sonish Lamsal · in development</small></h3>
-<p>The variety normal distribution in R. Provides tools for working with probability distributions supported on algebraic varieties.</p>
+<h3 class="anchored" data-anchor-id="vnorm-with-sonish-lamsal-in-development"><a href="https://github.com/dkahle/vnorm">vnorm</a> <small class="text-muted">with Sonish Lamsal · in development</small></h3>
+<p>The variety normal distribution in R. A Monte Carlo platform for sampling from and working with probability distributions supported on algebraic varieties.</p>
 <p><a href="https://github.com/dkahle/vnorm">[GitHub]</a></p>
 <hr>
 </section>
 <section id="m2r-with-christopher-oneill-and-jeff-sommars" class="level3">
 <h3 class="anchored" data-anchor-id="m2r-with-christopher-oneill-and-jeff-sommars"><a href="https://github.com/coneill-math/m2r">m2r</a> <small class="text-muted">with Christopher O’Neill and Jeff Sommars</small></h3>
 <p>An interface from R to Macaulay2, a computer algebra system for algebraic geometry and commutative algebra. Enables polynomial ring computations from within R.</p>
-<p><a href="https://github.com/coneill-math/m2r">[GitHub]</a> <a href="https://cran.r-project.org/package=m2r">[CRAN]</a> · 33K downloads</p>
+<p><a href="https://github.com/coneill-math/m2r">[GitHub]</a> <a href="https://cran.r-project.org/package=m2r">[CRAN]</a> · 34K downloads</p>
 <hr>
 </section>
 <section id="algstat-with-luis-garcia-puente-and-ruriko-yoshida" class="level3">
@@ -302,8 +307,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="probability-distributions">Probability Distributions</h2>
 <section id="invgamma-with-james-stamey" class="level3">
 <h3 class="anchored" data-anchor-id="invgamma-with-james-stamey"><a href="https://github.com/dkahle/invgamma">invgamma</a> <small class="text-muted">with James Stamey</small></h3>
-<p>The inverse gamma distribution in R: density, distribution, quantile, and random generation functions following base R conventions.</p>
-<p><a href="https://github.com/dkahle/invgamma">[GitHub]</a> <a href="https://cran.r-project.org/package=invgamma">[CRAN]</a> · 455K downloads</p>
+<p>The inverse gamma distribution in R: density, distribution, quantile, and random generation functions following base R conventions. Described in <em>PeerJ Computer Science</em> (2025).</p>
+<p><a href="https://github.com/dkahle/invgamma">[GitHub]</a> <a href="https://cran.r-project.org/package=invgamma">[CRAN]</a> · 467K downloads</p>
 <hr>
 </section>
 <section id="chi" class="level3">
@@ -312,10 +317,10 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://github.com/dkahle/chi">[GitHub]</a> <a href="https://cran.r-project.org/package=chi">[CRAN]</a> · 45K downloads</p>
 <hr>
 </section>
-<section id="dirchlet" class="level3">
-<h3 class="anchored" data-anchor-id="dirchlet"><a href="https://github.com/dkahle/dirchlet">dirchlet</a></h3>
+<section id="dirichlet" class="level3">
+<h3 class="anchored" data-anchor-id="dirichlet"><a href="https://github.com/dkahle/dirichlet">dirichlet</a></h3>
 <p>The Dirichlet distribution in R: density, random generation, and related functions following base R conventions.</p>
-<p><a href="https://github.com/dkahle/dirchlet">[GitHub]</a></p>
+<p><a href="https://github.com/dkahle/dirichlet">[GitHub]</a></p>
 <hr>
 </section>
 <section id="betalu" class="level3">
@@ -328,15 +333,21 @@ ul.task-list li input[type="checkbox"] {
 <section id="bayesian-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="bayesian-statistics">Bayesian Statistics</h2>
 <section id="unmconf-with-ryan-hebdon-james-stamey-and-xiao-zhang" class="level3">
-<h3 class="anchored" data-anchor-id="unmconf-with-ryan-hebdon-james-stamey-and-xiao-zhang"><a href="https://github.com/dkahle/unmconf">unmconf</a> <small class="text-muted">with Ryan Hebdon, James Stamey, and Xiao Zhang</small></h3>
-<p>Bayesian regression with unmeasured confounders. Provides tools for fitting models that account for unmeasured confounding via informative priors.</p>
-<p><a href="https://github.com/dkahle/unmconf">[GitHub]</a> · 6K downloads</p>
+<h3 class="anchored" data-anchor-id="unmconf-with-ryan-hebdon-james-stamey-and-xiao-zhang"><a href="https://github.com/ryanhebdon72/unmconf">unmconf</a> <small class="text-muted">with Ryan Hebdon, James Stamey, and Xiao Zhang</small></h3>
+<p>Bayesian regression with unmeasured confounders. Provides tools for fitting models that account for unmeasured confounding via informative priors. Described in <em>BMC Medical Research Methodology</em> (2024).</p>
+<p><a href="https://github.com/ryanhebdon72/unmconf">[GitHub]</a> <a href="https://cran.r-project.org/package=unmconf">[CRAN]</a> · 6.2K downloads</p>
 <hr>
 </section>
 <section id="bayesrates-with-james-stamey-and-ryan-sides" class="level3">
 <h3 class="anchored" data-anchor-id="bayesrates-with-james-stamey-and-ryan-sides"><a href="https://github.com/dkahle/bayesRates">bayesRates</a> <small class="text-muted">with James Stamey and Ryan Sides</small></h3>
 <p>Two-sample tests and sample size determination from a Bayesian perspective for Poisson and binomial models.</p>
 <p><a href="https://github.com/dkahle/bayesRates">[GitHub]</a></p>
+<hr>
+</section>
+<section id="interactive-graphical-elicitation-tool-with-christopher-casement" class="level3">
+<h3 class="anchored" data-anchor-id="interactive-graphical-elicitation-tool-with-christopher-casement"><a href="https://ccasement.shinyapps.io/graphicalElicitation/">Interactive Graphical Elicitation Tool</a> <small class="text-muted">with Christopher Casement</small></h3>
+<p>A Shiny app for eliciting prior distributions graphically, implementing the lineup- and phoropter-style procedures developed in our prior elicitation work.</p>
+<p><a href="https://ccasement.shinyapps.io/graphicalElicitation/">[App]</a></p>
 <hr>
 </section>
 </section>
@@ -366,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="tldrdocs-with-james-otto" class="level3">
 <h3 class="anchored" data-anchor-id="tldrdocs-with-james-otto"><a href="https://github.com/jamesotto852/tldrDocs">tldrDocs</a> <small class="text-muted">with James Otto</small></h3>
 <p>tldrPages documentation for base R functions, providing the content layer for the tldrPages system.</p>
-<p><a href="https://github.com/jamesotto852/tldrDocs">[GitHub]</a> <a href="https://cran.r-project.org/package=tldrDocs">[CRAN]</a></p>
+<p><a href="https://github.com/jamesotto852/tldrDocs">[GitHub]</a> <a href="https://cran.r-project.org/package=tldrDocs">[CRAN]</a> · 1.6K downloads</p>
 <hr>
 </section>
 <section id="registers-with-james-otto" class="level3">

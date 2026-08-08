@@ -4,12 +4,12 @@ toc: true
 toc-title: ""
 ---
 
-My research spans statistical computing and graphics, algebraic statistics, and Bayesian methods for pharmaceutical statistics.
+My research spans statistical computing and data visualization, algebraic statistics, Bayesian and pharmaceutical statistics, data science technologies, and statistical machine learning.
 
 ## Journal Articles
 
 ::: {.papers .blue}
-Turner, D., **D. Kahle**, and R. Sturdivant (2026). "[ggvfields: Vector Field Visualization in R](https://journal.r-project.org/)." *The R Journal*, 18(1):228–253.
+Turner, D., **D. Kahle**, and R. Sturdivant (2026). "[ggvfields: Vector Field Visualization in R](https://journal.r-project.org/)." *The R Journal*, 18(1):228–253. In press.
 
 Kim, F. S., **D. Kahle**, N. Fleming, M. Gallaugher, T. Houston, S. Lamsal, and R. X. Sturdivant (2025). "[Comparing Costs and Utilization Between Provider Types for Back and Neck Pain: A Cross-Sectional Study.](https://www.sciencedirect.com/science/article/pii/S016147542400071X)" *Journal of Manipulative and Physiological Therapeutics*, 48(1–5):69–78.
 
@@ -75,21 +75,23 @@ Seaman, J., J. Stamey, **D. Kahle**, and S. Blair (2019). "A Brief Guide to Baye
 ## Under Review
 
 ::: {.papers .gold}
-Otto, J. and **D. Kahle**. "tldrPages: Quick Documentation in the R Console."
+Mitchell, C., P. James, D. Kring, and **D. Kahle**. "Impact Induced Porosity of Meteor Crater." In revision.
+
+Turner, D., **D. Kahle**, R. Sturdivant, and J. Otto. "ggfunction: Functions and Distributions in ggplot2."
+
+**Kahle, D.** and J. Hauenstein. "[Stochastic Exploration of Real Varieties via Variety Distributions](https://arxiv.org/abs/2410.16071)." arXiv:2410.16071.
 
 Kim, F. S., **D. Kahle**, N. S. Fleming, M. Gallaugher, T. Houston, C. Fox, B. Cahill, and R. Sturdivant. "Comparing Costs and Utilization Between Airrosti and Five Provider Types for Musculoskeletal Pain."
-
-Mitchell, C., P. James, D. Kring, and **D. Kahle**. "Impact Induced Porosity of Meteor Crater."
 :::
 
 ## In Preparation
 
 ::: {.papers .red}
-**Kahle, D.** and J. Hauenstein. "[Stochastic Exploration of Real Varieties via Variety Distributions](https://arxiv.org/abs/2410.16071)." arXiv:2410.16071.
+Blair, S., **D. Kahle**, and J. Seaman. "Sensitivity to Prior Misspecification in the Mode-Percentile Method of Elicitation."
+
+Otto, J. and **D. Kahle**. "tldrPages: Quick Documentation in the R Console."
 
 Morgan, N., M. Gallaugher, and **D. Kahle**. "ggclassify: Visualizing Classifiers in R."
-
-Blair, S., **D. Kahle**, and J. Seaman. "Sensitivity to Prior Misspecification in the Mode-Percentile Method of Elicitation."
 
 Young, P., **D. Kahle**, J. Patrick, and D. Young. "A Sufficient Linear-Dimension Reduction Model for Supervised Classification for Multiple Multivariate Skew-Normal Populations."
 

@@ -6,6 +6,8 @@ toc-title: ""
 
 I develop and maintain open-source R packages across statistical graphics, algebraic statistics, Bayesian methods, and more. Source code is on [GitHub](https://github.com/dkahle).
 
+<small class="text-muted">Download counts are all-time CRAN downloads as of August 2026, collected with [cranlogs](https://cran.r-project.org/package=cranlogs).</small>
+
 ## Statistical Graphics
 
 ### [ggmap](https://github.com/dkahle/ggmap) <small class="text-muted">with Hadley Wickham</small>
@@ -20,39 +22,39 @@ Spatial visualization with ggplot2. Downloads map tiles from Google Maps, OpenSt
 
 Interpretable bivariate density visualization for ggplot2 using highest density regions (HDRs). HDRs convey where the data actually are, rather than the density value itself, making them more natural to communicate.
 
-[[GitHub]](https://github.com/jamesotto852/ggdensity) [[CRAN]](https://cran.r-project.org/package=ggdensity) [[Docs]](https://jamesotto852.github.io/ggdensity/) · 44K downloads
+[[GitHub]](https://github.com/jamesotto852/ggdensity) [[CRAN]](https://cran.r-project.org/package=ggdensity) [[Docs]](https://jamesotto852.github.io/ggdensity/) · 46K downloads
 
 ---
 
 ### [ggvfields](https://dustysturner.com/ggvfields/) <small class="text-muted">with Dusty Turner and Rodney Sturdivant</small>
 
-Vector field visualization for ggplot2. Provides geoms for visualizing vector-valued functions and fields, with applications in physics, fluid dynamics, and statistical modeling.
+Vector field visualization for ggplot2. Provides geoms for visualizing vector-valued functions and fields, with applications in physics, fluid dynamics, and statistical modeling. Described in *The R Journal* (2026).
 
-[[GitHub]](https://github.com/dusty-turner/ggvfields) [[CRAN]](https://cran.r-project.org/package=ggvfields) [[Docs]](https://dustysturner.com/ggvfields/) · 3K downloads
+[[GitHub]](https://github.com/dusty-turner/ggvfields) [[CRAN]](https://cran.r-project.org/package=ggvfields) [[Docs]](https://dustysturner.com/ggvfields/) · 3.6K downloads
 
 ---
 
 ### [ggfunction](https://github.com/dusty-turner/ggfunction) <small class="text-muted">with Dusty Turner, James Otto, and Rodney Sturdivant · in development</small>
 
-Mathematical functions and probability distributions, along with estimates, in ggplot2.
+Mathematical functions and probability distributions, along with estimates, in ggplot2. An accompanying paper is under review.
 
 [[GitHub]](https://github.com/dusty-turner/ggfunction)
 
 ---
 
-### [ggclassify](https://github.com/dkahle/ggclassify) <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small>
+### [ggclassify](https://github.com/nathaniel-morgan/ggclassify) <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small>
 
 Visualizing classifiers in R. Extends ggplot2 with tools for displaying decision boundaries and classification regions from statistical and machine learning models.
 
-[[GitHub]](https://github.com/dkahle/ggclassify)
+[[GitHub]](https://github.com/nathaniel-morgan/ggclassify)
 
 ---
 
-### [biroot](https://github.com/dkahle/biroot) <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small>
+### [biroot](https://github.com/nathaniel-morgan/biroot) <small class="text-muted">with Nathaniel Morgan and Michael Gallaugher · in development</small>
 
 Tools for computing and visualizing bivariate level sets in R.
 
-[[GitHub]](https://github.com/dkahle/biroot)
+[[GitHub]](https://github.com/nathaniel-morgan/biroot)
 
 ---
 
@@ -62,13 +64,13 @@ Tools for computing and visualizing bivariate level sets in R.
 
 Symbolic computation with multivariate polynomials in R. Provides a full framework for polynomial arithmetic, calculus, evaluation, and manipulation in multiple variables.
 
-[[GitHub]](https://github.com/dkahle/mpoly) [[CRAN]](https://cran.r-project.org/package=mpoly) · 118K downloads
+[[GitHub]](https://github.com/dkahle/mpoly) [[CRAN]](https://cran.r-project.org/package=mpoly) · 121K downloads
 
 ---
 
-### [vnorm](https://github.com/sonish13/vnorm) <small class="text-muted">with Sonish Lamsal · in development</small>
+### [vnorm](https://github.com/dkahle/vnorm) <small class="text-muted">with Sonish Lamsal · in development</small>
 
-The variety normal distribution in R. Provides tools for working with probability distributions supported on algebraic varieties.
+The variety normal distribution in R. A Monte Carlo platform for sampling from and working with probability distributions supported on algebraic varieties.
 
 [[GitHub]](https://github.com/dkahle/vnorm)
 
@@ -78,7 +80,7 @@ The variety normal distribution in R. Provides tools for working with probabilit
 
 An interface from R to Macaulay2, a computer algebra system for algebraic geometry and commutative algebra. Enables polynomial ring computations from within R.
 
-[[GitHub]](https://github.com/coneill-math/m2r) [[CRAN]](https://cran.r-project.org/package=m2r) · 33K downloads
+[[GitHub]](https://github.com/coneill-math/m2r) [[CRAN]](https://cran.r-project.org/package=m2r) · 34K downloads
 
 ---
 
@@ -120,9 +122,9 @@ Tropical geometry in R. Provides tools for computing and visualizing tropical al
 
 ### [invgamma](https://github.com/dkahle/invgamma) <small class="text-muted">with James Stamey</small>
 
-The inverse gamma distribution in R: density, distribution, quantile, and random generation functions following base R conventions.
+The inverse gamma distribution in R: density, distribution, quantile, and random generation functions following base R conventions. Described in *PeerJ Computer Science* (2025).
 
-[[GitHub]](https://github.com/dkahle/invgamma) [[CRAN]](https://cran.r-project.org/package=invgamma) · 455K downloads
+[[GitHub]](https://github.com/dkahle/invgamma) [[CRAN]](https://cran.r-project.org/package=invgamma) · 467K downloads
 
 ---
 
@@ -134,11 +136,11 @@ The chi distribution (not chi-squared) in R: density, distribution, quantile, an
 
 ---
 
-### [dirchlet](https://github.com/dkahle/dirchlet)
+### [dirichlet](https://github.com/dkahle/dirichlet)
 
 The Dirichlet distribution in R: density, random generation, and related functions following base R conventions.
 
-[[GitHub]](https://github.com/dkahle/dirchlet)
+[[GitHub]](https://github.com/dkahle/dirichlet)
 
 ---
 
@@ -152,11 +154,11 @@ The beta distribution with support [l, u] in R, generalizing the standard beta d
 
 ## Bayesian Statistics
 
-### [unmconf](https://github.com/dkahle/unmconf) <small class="text-muted">with Ryan Hebdon, James Stamey, and Xiao Zhang</small>
+### [unmconf](https://github.com/ryanhebdon72/unmconf) <small class="text-muted">with Ryan Hebdon, James Stamey, and Xiao Zhang</small>
 
-Bayesian regression with unmeasured confounders. Provides tools for fitting models that account for unmeasured confounding via informative priors.
+Bayesian regression with unmeasured confounders. Provides tools for fitting models that account for unmeasured confounding via informative priors. Described in *BMC Medical Research Methodology* (2024).
 
-[[GitHub]](https://github.com/dkahle/unmconf) · 6K downloads
+[[GitHub]](https://github.com/ryanhebdon72/unmconf) [[CRAN]](https://cran.r-project.org/package=unmconf) · 6.2K downloads
 
 ---
 
@@ -165,6 +167,14 @@ Bayesian regression with unmeasured confounders. Provides tools for fitting mode
 Two-sample tests and sample size determination from a Bayesian perspective for Poisson and binomial models.
 
 [[GitHub]](https://github.com/dkahle/bayesRates)
+
+---
+
+### [Interactive Graphical Elicitation Tool](https://ccasement.shinyapps.io/graphicalElicitation/) <small class="text-muted">with Christopher Casement</small>
+
+A Shiny app for eliciting prior distributions graphically, implementing the lineup- and phoropter-style procedures developed in our prior elicitation work.
+
+[[App]](https://ccasement.shinyapps.io/graphicalElicitation/)
 
 ---
 
@@ -201,7 +211,7 @@ Short-form documentation in the R console. Provides compact, scannable help page
 
 tldrPages documentation for base R functions, providing the content layer for the tldrPages system.
 
-[[GitHub]](https://github.com/jamesotto852/tldrDocs) [[CRAN]](https://cran.r-project.org/package=tldrDocs)
+[[GitHub]](https://github.com/jamesotto852/tldrDocs) [[CRAN]](https://cran.r-project.org/package=tldrDocs) · 1.6K downloads
 
 ---
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -38,10 +41,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ec637c3e3a86dac58f4764eef3543a95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-cd1eae078b67efe6a96f7fd1e95d9af1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -190,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-anchor-id="welcome">Welcome</h2>
 <p>Welcome to my webpage!</p>
 <p>I am a Professor in the <a href="http://www.baylor.edu/statistics/">Department of Statistical Science</a> at <a href="http://www.baylor.edu/">Baylor University</a>.</p>
-<p>Most of my work is in statistical computing and graphics, especially statistical software development in <a href="http://www.r-project.org/">R</a>. Current major projects involve statistical graphics (<a href="https://dustysturner.com/ggvfields/">ggvfields</a>, <a href="https://jamesotto852.github.io/ggdensity/">ggdensity</a> and others to come), algebraic statistics (<a href="https://github.com/dkahle/mpoly">mpoly</a>, <a href="https://github.com/dkahle/algstat">algstat</a>, <a href="https://github.com/dkahle/latte">latte</a>, <a href="https://github.com/coneill-math/m2r">m2r</a>) and Bayesian statistics for pharmaceutical clinical trials (proprietary). I also wrote the <a href="https://github.com/dkahle/ggmap">ggmap</a> package with Hadley Wickham and maintain it when I have time.</p>
+<p>Most of my work is in statistical computing and graphics, especially statistical software development in <a href="http://www.r-project.org/">R</a>. Current major projects involve statistical graphics (<a href="https://dustysturner.com/ggvfields/">ggvfields</a>, <a href="https://jamesotto852.github.io/ggdensity/">ggdensity</a> and others to come), algebraic statistics (<a href="https://github.com/dkahle/mpoly">mpoly</a>, <a href="https://github.com/dkahle/algstat">algstat</a>, <a href="https://github.com/dkahle/latte">latte</a>, <a href="https://github.com/coneill-math/m2r">m2r</a>, <a href="https://github.com/dkahle/vnorm">vnorm</a>) and Bayesian statistics for pharmaceutical clinical trials (proprietary). I also wrote the <a href="https://github.com/dkahle/ggmap">ggmap</a> package with Hadley Wickham and maintain it when I have time.</p>
 </section>
 <section id="experience" class="level2">
 <h2 data-anchor-id="experience">Experience</h2>
@@ -233,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="bio" class="level2">
 <h2 data-anchor-id="bio">Bio</h2>
 <p>I currently hold the position of Professor in the <a href="https://www.baylor.edu/statistics/">Department of Statistical Science</a> at <a href="https://www.baylor.edu/">Baylor University</a>. Before coming to Baylor in 2011 I earned my doctorate from the <a href="https://statistics.rice.edu/">Department of Statistics</a> at <a href="https://www.rice.edu/">Rice University</a> in Houston, Texas. For my undergraduate degree I attended the <a href="https://www.richmond.edu/">University of Richmond</a> and received my degree in <a href="https://math.richmond.edu/">mathematics</a> working primarily with <a href="https://math.richmond.edu/faculty/wross/">Bill Ross</a>.</p>
-<p>During my undergraduate summers, <a href="https://publichealth.indiana.edu/research/faculty-directory/profile.html?user=jrojo">Javier Rojo</a> slowly turned me into a statistician through his fantastic <a href="https://www.stat.rice.edu/~jrojo/RUSIS/RUSIS.html">REU RUSIS</a>. While at Rice for my graduate studies I worked with Dr.&nbsp;Rojo as part of RUSIS teaching statistical computing and graphics during the summers, and he later became my doctoral thesis advisor. A program very dear to me, I spent five years with RUSIS as a student or teacher and was the program’s second Ph.D.</p>
+<p>During my undergraduate summers, <a href="https://publichealth.indiana.edu/about/directory/profile.html?user=jrojo">Javier Rojo</a> slowly turned me into a statistician through his fantastic <a href="https://www.stat.rice.edu/~jrojo/RUSIS/RUSIS.html">REU RUSIS</a>. While at Rice for my graduate studies I worked with Dr.&nbsp;Rojo as part of RUSIS teaching statistical computing and graphics during the summers, and he later became my doctoral thesis advisor. A program very dear to me, I spent five years with RUSIS as a student or teacher and was the program’s second Ph.D.</p>
 <p>My research interests are wide ranging but generally revolve around statistical computing and graphics. My research right now focuses mostly on statistical graphics, algebraic statistics, and Bayesian biopharmaceutical statistics. I also maintain R’s ggmap package, which I co-authored with the inimitable <a href="https://hadley.nz">Hadley Wickham</a>. Theoretical research I have done recently involves algebraic pattern recognition, Markov chain Monte Carlo algorithms for exact inference in discrete exponential family models, and double sampling procedures for count data.</p>
 <p>Outside of Marrs McLean, my wife and I enjoy Latin dance, musical theater, and playing with our three daughters.</p>
 
