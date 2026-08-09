@@ -58,6 +58,42 @@
 #     chosen variance envelope, K -> D K D with D = diag(sqrt(env/diag(K))),
 #     fixes the amplitude while leaving the correlation structure — and so the
 #     roughness — untouched.
+#
+# HOW THE SETTINGS WERE ARRIVED AT ---------------------------------------------
+#
+# Final: ell 0.20, share (1-t)^4, amp_exp(0.25), m = 16 paths over 8 colors,
+# seed 56, glow off, refined k = 4 (700 -> 2797 points). Recorded because in
+# every case the obvious choice was the wrong one:
+#
+#   share, the transition. Blending the raw kernels under a single weight gave
+#     no real control at all (see WHY NORMALISE FIRST above). Within the family,
+#     BIGGER exponents smooth sooner — so (1-t) is its slowest member, not its
+#     fastest, which is the reverse of what "linear" suggests. Ramping share to
+#     exactly zero partway across scores best of anything tried (roughness 0.004
+#     past the cutoff) and looks worst: beyond the cutoff the process is purely
+#     squared-exponential, whose correlation length is far longer, so paths snap
+#     from jagged into clean arcs. (1-t)^4 clears the right ~40% with no seam.
+#
+#   amp, the envelope. Originally an exponent on the VARIANCE — a trap, since
+#     the visible spread is its square root, so a genuinely quadratic variance
+#     drew a linear cone. It now takes the amplitude directly. Polynomials of
+#     any degree still leave a corner where the paths lift off the baseline;
+#     exp(-c/(t(1-t))) is C-infinity, every derivative vanishing at both ends,
+#     so there is no corner at any magnification. c = 0.25 holds the envelope
+#     near 1% of full height at t = 0.05.
+#
+#   seed. 90 seeds scored on four things: whether the bulk of paths fills the
+#     frame (rather than one spike squashing the rest), spread through the
+#     smooth half, spread through the jagged half, and balance about the
+#     centerline. 37 passed, which only rules out the obviously bad, so the top
+#     12 were rendered and judged by eye. 56 has the fullest body and the
+#     cleanest sweeps once smooth.
+#
+#   grid. 700 points while selecting, then refine() to 2797 by conditional
+#     simulation — which preserves the chosen realization instead of redrawing
+#     it. See refine() for why resampling would not.
+#
+# Reproduce exactly with: Rscript R/banner.R
 # ------------------------------------------------------------------------------
 
 suppressPackageStartupMessages(library(ggplot2))

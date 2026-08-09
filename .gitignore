@@ -11,4 +11,4 @@ initializing-website.sh
 # generated candidates from R/og-image.R; only og-image.png is served
 /og-b-streams.png
 /og-c-hdr.png
-/banner.png
+/banner-candidates/
