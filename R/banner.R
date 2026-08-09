@@ -106,15 +106,20 @@ to_corr <- function(K) {
 #'   visible roughness past the middle and still arrives smooth; (1-t) is so
 #'   gradual it is still faintly jagged at the right edge, because Brownian
 #'   dominates at small scales even at a low share.
-#' @param env_p exponent on the variance envelope (4t(1-t))^env_p. This is the
-#'   variance, so amplitude goes as the square root: env_p = 2 pinches the
-#'   variance quadratically at both ends and ramps the paths in and out
-#'   linearly. Lower values are deceptively violent — the old 0.7 put amplitude
-#'   at t^0.35, which is near-vertical off the left edge, so the paths appeared
-#'   to explode open and then crash shut. Higher values pinch harder still, into
-#'   a narrow leaf.
+#' @param env_p exponent on the variance envelope (4t(1-t))^env_p.
+#'
+#'   MIND THE SQUARE ROOT. This scales the VARIANCE, but what the eye reads is
+#'   the spread of the paths, which is its square root — so the visible envelope
+#'   opens as t^(env_p/2), not t^env_p. Regressing log(sd of the paths) on
+#'   log(t) near the left end confirms it: env_p = 2 measures out at t^0.94, a
+#'   straight cone, even though the variance really is quadratic. To make the
+#'   PATHS open quadratically you want env_p = 4, which measures t^1.87.
+#'
+#'   For reference: 0.7 opens at t^0.35, near-vertical off the edge — paths
+#'   explode open and crash shut. 2 is linear. 4 is quadratic. Beyond that it
+#'   pinches into a narrow leaf and wastes vertical space.
 bridge_kernel <- function(t, ell = 0.20, share = function(t) (1 - t)^2,
-                          env_p = 2) {
+                          env_p = 4) {
   n <- length(t)
   C_rough  <- to_corr(outer(t, t, pmin) - outer(t, t, "*"))
   C_smooth <- to_corr(pin(exp(-outer(t, t, "-")^2 / (2 * ell^2)), c(1, n)))
