@@ -106,20 +106,14 @@ to_corr <- function(K) {
 #'   visible roughness past the middle and still arrives smooth; (1-t) is so
 #'   gradual it is still faintly jagged at the right edge, because Brownian
 #'   dominates at small scales even at a low share.
-#' @param env_p exponent on the variance envelope (4t(1-t))^env_p.
-#'
-#'   MIND THE SQUARE ROOT. This scales the VARIANCE, but what the eye reads is
-#'   the spread of the paths, which is its square root — so the visible envelope
-#'   opens as t^(env_p/2), not t^env_p. Regressing log(sd of the paths) on
-#'   log(t) near the left end confirms it: env_p = 2 measures out at t^0.94, a
-#'   straight cone, even though the variance really is quadratic. To make the
-#'   PATHS open quadratically you want env_p = 4, which measures t^1.87.
-#'
-#'   For reference: 0.7 opens at t^0.35, near-vertical off the edge — paths
-#'   explode open and crash shut. 2 is linear. 4 is quadratic. Beyond that it
-#'   pinches into a narrow leaf and wastes vertical space.
+#' @param amp function of t giving the AMPLITUDE envelope — the spread of the
+#'   paths you actually see, not the variance. It is parameterised this way on
+#'   purpose: an earlier version took an exponent on the variance, and since the
+#'   visible spread is its square root, "quadratic variance" silently drew a
+#'   linear cone. Squaring happens internally now, so what you write is what you
+#'   see. Use amp_poly() or amp_exp() below.
 bridge_kernel <- function(t, ell = 0.20, share = function(t) (1 - t)^2,
-                          env_p = 4) {
+                          amp = amp_exp(0.25)) {
   n <- length(t)
   C_rough  <- to_corr(outer(t, t, pmin) - outer(t, t, "*"))
   C_smooth <- to_corr(pin(exp(-outer(t, t, "-")^2 / (2 * ell^2)), c(1, n)))
@@ -128,8 +122,28 @@ bridge_kernel <- function(t, ell = 0.20, share = function(t) (1 - t)^2,
   b <- sqrt(1 - a^2)
   C <- (a %o% a) * C_rough + (b %o% b) * C_smooth
 
-  e <- sqrt((4 * t * (1 - t))^env_p)              # common amplitude envelope
+  e <- amp(t)                                     # amplitude, squared by the outer product
   (e %o% e) * C
+}
+
+#' Polynomial amplitude envelope: the paths open as t^p at each end.
+amp_poly <- function(p = 2) function(t) (4 * t * (1 - t))^p
+
+#' Exponential amplitude envelope — exp(-c / (t(1-t))), normalised to peak at 1.
+#'
+#' This is the C-infinity bump: every derivative vanishes at both endpoints, so
+#' it is flatter near the ends than any polynomial, however high the degree. The
+#' paths lift off the baseline with no visible corner at all, then swell into a
+#' fuller body than a polynomial gives, because once clear of the ends the bump
+#' rises quickly and plateaus.
+#'
+#' c controls how long it hugs zero. At c = 0.10 the envelope is already at 18%
+#' of full height by t = 0.05; at 0.25 it is 1%; at 0.35, 0.3%. Larger means a
+#' longer flat run and a more abrupt swell.
+amp_exp <- function(c = 0.25) function(t) {
+  z <- exp(-c / (t * (1 - t)))
+  z[!is.finite(z)] <- 0
+  z / max(z)
 }
 
 #' Draw m paths. Jitter is not optional here — see the note up top.
@@ -181,14 +195,15 @@ save_banner <- function(p, file, width = 1584, height = 396, dpi = 150) {
 
 n_grid <- 700
 tt <- seq(0, 1, length.out = n_grid)
-K  <- bridge_kernel(tt, ell = 0.20, share = function(t) (1 - t)^2)
+K  <- bridge_kernel(tt, ell = 0.20, share = function(t) (1 - t)^2,
+                    amp = amp_exp(0.25))
 
 
 # 2. plot ----------------------------------------------------------------------
 # LinkedIn overlays the profile photo on the lower-left of the banner — roughly a
 # 152px circle centred near x = 8%, hanging off the bottom edge. It clips an
 # empty corner at these settings, but re-check with a mock circle if you retune
-# shape or env_p, since both move where the dense jagged region sits.
+# share or amp, since both move where the dense jagged region sits.
 
 (p_banner <- banner(K, tt, m = 16, seed = 16, glow = FALSE))
 
