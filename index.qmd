@@ -1,12 +1,16 @@
 ---
 title: "David Kahle"
 subtitle: "Computational Statistician"
-image: profile.jpg
+# Page-level `image` is what Quarto puts in og:image / twitter:image. The about
+# block takes its own `image` below, so the headshot stays on the page while
+# links preview the variety plot.
+image: og-image.png
 page-layout: full
 toc: true
 toc-title: ""
 about:
   template: trestles
+  image: profile.jpg
   image-shape: round
   image-width: 220px
   links:

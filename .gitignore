@@ -7,3 +7,7 @@ initializing-website.sh
 /index_files/
 
 **/*.quarto_ipynb
+
+# generated candidates from R/og-image.R; only og-image.png is served
+/og-b-streams.png
+/og-c-hdr.png

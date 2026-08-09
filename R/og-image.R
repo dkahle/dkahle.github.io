@@ -422,7 +422,8 @@ p_c <- plot_hdr(d_hdr, xlim = c(-3.6, 3.4), ylim = c(-1.7, 1.65))
 # design.
 
 if (SAVE) {
-  save_og(p_a, "og-a-variety.png")
+  # p_a is the one the site actually serves; b and c stay candidates.
+  save_og(p_a, "og-image.png")
   save_og(p_b, "og-b-streams.png")
   save_og(p_c, "og-c-hdr.png")
 }
