@@ -2,7 +2,7 @@
 #
 # Generates candidate Open Graph / social-preview images for kahle.io.
 # Target spec: 1200 x 630 px (1.91:1), < ~1 MB, legible when scaled to a
-# thumbnail. Colours come from styles.scss so the card matches the site.
+# thumbnail. Colors come from styles.scss so the card matches the site.
 #
 # Run it from anywhere, including the project root:
 #
@@ -41,8 +41,8 @@ dens_fade <- c("#2E3A40", "#4E7F86", blue)
 
 # strip all chrome — the card is pure image, no axes/legend/margins
 bare <- theme_void() + theme(
-  plot.background  = element_rect(fill = dark, colour = NA),
-  panel.background = element_rect(fill = dark, colour = NA),
+  plot.background  = element_rect(fill = dark, color = NA),
+  panel.background = element_rect(fill = dark, color = NA),
   legend.position  = "none",
   plot.margin      = margin(0, 0, 0, 0)
 )
@@ -102,8 +102,8 @@ HMC = function (U, grad_U, epsilon, L, current_q) {
 # A. algebraic variety ---------------------------------------------------------
 #
 # Draws from the variety normal distribution with vnorm: points concentrated on
-# the real variety {p = 0} with Gaussian falloff perpendicular to it, coloured
-# by the density that actually generated them. So the colour is meaningful —
+# the real variety {p = 0} with Gaussian falloff perpendicular to it, colored
+# by the density that actually generated them. So the color is meaningful —
 # blue is the high-density core, gold are genuine tail draws.
 #
 # Two things that will bite you:
@@ -136,19 +136,25 @@ sample_variety <- function(poly, n = 9000, sd = 0.03, w = 2) {
 #'              closed arrowhead at the proposal end.
 plot_variety <- function(pts, poly = NULL, cols = dens_warm,
                          size = 0.5, alpha = 0.8, curve = FALSE,
-                         path = NULL, path_colour = red, path_width = 0.4,
+                         path = NULL, path_color = red, path_width = 0.4,
                          head = 0.07, xlim, ylim) {
-  p <- ggplot(pts, aes(x, y, colour = d)) +
-    geom_point(size = size, alpha = alpha) +
-    scale_colour_gradientn(colours = cols)
+  # A psize column (see size_jitter()) varies the points individually; without
+  # one, size applies to all of them.
+  p <- ggplot(pts, aes(x, y, color = d))
+  p <- if ("psize" %in% names(pts)) {
+    p + geom_point(aes(size = psize), alpha = alpha) + scale_size_identity()
+  } else {
+    p + geom_point(size = size, alpha = alpha)
+  }
+  p <- p + scale_color_gradientn(colors = cols)
   if (curve && !is.null(poly)) {
-    p <- p + geom_variety(poly = poly, colour = lgray,
+    p <- p + geom_variety(poly = poly, color = lgray,
                           linewidth = 0.3, inherit.aes = FALSE)
   }
   if (!is.null(path)) {
     p <- p + geom_path(
       data = path, aes(x, y), inherit.aes = FALSE,
-      colour = path_colour, linewidth = path_width,
+      color = path_color, linewidth = path_width,
       arrow = arrow(type = "closed", angle = 22, length = unit(head, "in"))
     )
   }
@@ -276,6 +282,17 @@ aimed_path <- function(poly, sd, angle, amp, arclen,
   df
 }
 
+#' Random per-point sizes, as a multiple of a base size.
+#'
+#' Draws are uniform on the multiplier, so the range below runs from a quarter
+#' of the base up to double it. Note that ggplot's size is a diameter, so area
+#' — the thing the eye actually weighs — goes as the square: a 2x point reads
+#' about 64x heavier than a 0.25x one. That spread is the point; it keeps the
+#' cloud from looking like a uniform stipple.
+size_jitter <- function(n, base, lower = 0.25, upper = 2) {
+  base * runif(n, lower, upper)
+}
+
 #' A point exactly on the lemniscate r^2 = a cos(2 theta), to start the chain.
 on_lemniscate <- function(theta, a = 3.2) {
   r <- sqrt(a * cos(2 * theta))
@@ -298,14 +315,14 @@ trifolium  <- mp("x^4 + 2 x^2 y^2 + y^4 - x^3 + 3 x y^2")
 # otherwise dominate at this scale.
 
 plot_streams <- function(fun, xlim = c(-4.4, 4.4), ylim = c(-2.4, 2.4),
-                         n = 15, T = 1.5, colour = blue,
+                         n = 15, T = 1.5, color = blue,
                          linewidth = 0.55, alpha = 0.8,
                          view_x = c(-3.8, 3.8), view_y = c(-2, 2)) {
   ggplot() +
     geom_stream_field(
       fun = fun, xlim = xlim, ylim = ylim, n = n, T = T,
       normalize = FALSE, arrow = NULL,
-      linewidth = linewidth, colour = colour, alpha = alpha
+      linewidth = linewidth, color = color, alpha = alpha
     ) +
     coord_fixed(xlim = view_x, ylim = view_y, expand = FALSE) +
     bare
@@ -323,7 +340,7 @@ field_dipole <- function(v) c(v[1]^2 - v[2]^2 - 1, 2 * v[1] * v[2])
 plot_hdr <- function(df, probs = c(.99, .95, .8, .5), fill = blue,
                      points = TRUE, xlim, ylim) {
   p <- ggplot(df, aes(x, y)) + geom_hdr(probs = probs, fill = fill)
-  if (points) p <- p + geom_point(size = 0.18, alpha = 0.25, colour = lgray)
+  if (points) p <- p + geom_point(size = 0.18, alpha = 0.25, color = lgray)
   p + coord_fixed(xlim = xlim, ylim = ylim, expand = FALSE) + bare
 }
 
@@ -352,8 +369,14 @@ SD_A <- 0.035
 
 d_variety <- sample_variety(lemniscate, n = 100, sd = SD_A, w = 2)
 
+# Base point size, doubled from the 0.8 this started at. Sizes are drawn here
+# rather than in plot_variety() so they stay fixed under set.seed(42) while you
+# iterate on the plot — otherwise every rebuild reshuffles them.
+SIZE_A <- 1.6
+d_variety$psize <- size_jitter(nrow(d_variety), base = SIZE_A)
+
 d_path <- aimed_path(lemniscate, sd = SD_A, angle = 25, amp = 0.055,
-                     arclen = 2.8, start = on_lemniscate(-0.62))
+                     arclen = 7.5, start = on_lemniscate(-0.62))
 
 d_hdr <- rmix()
 
@@ -365,8 +388,9 @@ d_hdr <- rmix()
 # Cheap to rebuild. Tweak here and print p_a / p_b / p_c to look at one.
 
 p_a <- plot_variety(d_variety, poly = lemniscate, curve = TRUE,
-                    path = d_path, size = 0.8, cols = dens_fade,
-                    xlim = c(-1.85, 1.85), ylim = c(-0.971, 0.971))
+                    path = d_path, cols = dens_fade,
+                    xlim = c(-1.85, 1.85), ylim = c(-0.971, 0.971),
+                    path_color = "gold")   # size comes from d_variety$psize
 
 p_b <- plot_streams(field_spiral)
 
