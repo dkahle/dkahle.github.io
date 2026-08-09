@@ -178,49 +178,101 @@ plot_variety <- function(pts, poly = NULL, cols = dens_warm,
 #     (that is what isTRUE() below is guarding). At sd = 0.03, eps = 0.010
 #     already diverges.
 
-#' Build the variety normal potential and its gradient for an mpoly.
+#' Build the variety normal potential, its gradient, and grad(g) itself.
+#'
+#' grad_g is exposed separately because on the variety g = 0, so grad_U
+#' vanishes there and carries no direction — aiming the momentum needs grad(g).
 variety_potential <- function(poly, sd, vars = c("x", "y")) {
   g  <- as.function(poly, varorder = vars, silent = TRUE)
   gx <- as.function(deriv(poly, vars[1]), varorder = vars, silent = TRUE)
   gy <- as.function(deriv(poly, vars[2]), varorder = vars, silent = TRUE)
   list(
+    g      = g,
+    grad_g = function(q) c(gx(q), gy(q)),
     U      = function(q) g(q)^2 / (2 * sd^2),
     grad_U = function(q) g(q) * c(gx(q), gy(q)) / sd^2
   )
 }
 
-#' One HMC transition, returning the whole leapfrog trajectory.
-#'
-#' @return data frame of the path, with attributes "accept" and "arclen".
-hmc_path <- function(poly, sd, epsilon, L, start, seed = NULL) {
-  if (!is.null(seed)) set.seed(seed)
-  pot <- variety_potential(poly, sd)
-  U <- pot$U; grad_U <- pot$grad_U
-
-  q <- start
-  p <- rnorm(length(q), 0, 1)
-  current_q <- q; current_p <- p
-
+#' Leapfrog integration, recording every step. Shared by both momentum modes.
+leapfrog <- function(grad_U, epsilon, L, q, p) {
   path <- matrix(NA_real_, L + 1, 2)
   path[1, ] <- q
-
   p <- p - epsilon * grad_U(q) / 2
   for (i in 1:L) {
     q <- q + epsilon * p
     path[i + 1, ] <- q
     if (i != L) p <- p - epsilon * grad_U(q)
   }
-  p <- -(p - epsilon * grad_U(q) / 2)
+  list(path = path, p = -(p - epsilon * grad_U(q) / 2))
+}
 
-  accept <- isTRUE(
-    log(runif(1)) < U(current_q) - U(q) + sum(current_p^2) / 2 - sum(p^2) / 2
-  )
-
-  df <- as.data.frame(path)
-  names(df) <- c("x", "y")
+finish_path <- function(path, p_end, p_start, start, U) {
+  q_end <- path[nrow(path), ]
+  df <- as.data.frame(path); names(df) <- c("x", "y")
   if (anyNA(df)) warning("leapfrog diverged — lower epsilon")
-  attr(df, "accept") <- accept
+  dH <- U(start) - U(q_end) + sum(p_start^2) / 2 - sum(p_end^2) / 2
+  attr(df, "logA")   <- dH
+  attr(df, "Pacc")   <- min(1, exp(dH))
   attr(df, "arclen") <- sum(sqrt(diff(df$x)^2 + diff(df$y)^2))
+  df
+}
+
+#' One HMC transition with momentum drawn at random, the usual way.
+hmc_path <- function(poly, sd, epsilon, L, start, seed = NULL) {
+  if (!is.null(seed)) set.seed(seed)
+  pot <- variety_potential(poly, sd)
+  p0  <- rnorm(length(start), 0, 1)
+  run <- leapfrog(pot$grad_U, epsilon, L, start, p0)
+  finish_path(run$path, run$p, p0, start, pot$U)
+}
+
+#' One HMC transition with the momentum aimed by hand.
+#'
+#' Random momentum gives whatever perpendicular component it happens to give,
+#' which ties the weave to sd. Setting it deliberately decouples the two: amp
+#' controls how far the trajectory swings off the variety, sd controls how
+#' tightly the sample hugs it.
+#'
+#'   amplitude = |p| sin(angle) * sd / |grad g|      -> solve for |p|
+#'   epsilon   < 2 sd / |grad g|                     -> stability ceiling
+#'   L         = arclen / (|p| cos(angle) * epsilon) -> desired path length
+#'
+#' Three things worth knowing before you retune this:
+#'
+#'   * ANGLE ALONE IS NOT THE ANSWER. Raising it does raise amplitude, but it
+#'     also cuts tangential speed, so the wavelength collapses and you get a
+#'     comb rather than a weave. Past ~55 degrees it stops reading as weaving.
+#'     Amplitude and wavelength have to move together, which is why this is
+#'     parameterised by amp and arclen rather than by angle and L.
+#'
+#'   * KEEP OFF THE NODE. The lemniscate is singular at the origin: grad g = 0,
+#'     so there is no restoring force and a fast trajectory sails through and
+#'     lands on an arbitrary branch. Paths that cross it come out as tangles.
+#'     Starting at theta = -0.62 with arclen ~2.8 stays inside the right lobe.
+#'
+#'   * A BIG SWING USUALLY GETS REJECTED. It ends far out in the tail, so the
+#'     acceptance ratio collapses — amp 0.055 at arclen 3.3 gives Pacc 0.08.
+#'     Tuning arclen so the last oscillation returns to the curve fixes it;
+#'     2.8 ends 0.001 away with Pacc 1. Check attr(path, "Pacc").
+aimed_path <- function(poly, sd, angle, amp, arclen,
+                       start, safety = 0.22) {
+  pot <- variety_potential(poly, sd)
+  gn  <- sqrt(sum(pot$grad_g(start)^2))
+
+  speed   <- amp * gn / (sd * sin(angle * pi / 180))
+  epsilon <- safety * 2 * sd / gn
+  L       <- max(30, round(arclen / (speed * cos(angle * pi / 180) * epsilon)))
+
+  n  <- pot$grad_g(start) / gn      # unit normal to the variety
+  tg <- c(-n[2], n[1])              # unit tangent
+  th <- angle * pi / 180
+  p0 <- speed * (cos(th) * tg + sin(th) * n)
+
+  run <- leapfrog(pot$grad_U, epsilon, L, start, p0)
+  df  <- finish_path(run$path, run$p, p0, start, pot$U)
+  attr(df, "speed") <- speed
+  attr(df, "L")     <- L
   df
 }
 
@@ -292,16 +344,16 @@ rmix <- function(n = 3000,
 
 set.seed(42)
 
-# sd is shared by the sample and the HMC path so the trajectory weaves through
-# the same band the points occupy — see the note above hmc_path().
-SD_A <- 0.12
+# sd is shared by the sample and the path so the trajectory weaves through the
+# same band the points occupy. It can be this tight — the points sit right on
+# the variety — only because the momentum is aimed rather than drawn; see the
+# note above aimed_path().
+SD_A <- 0.035
 
 d_variety <- sample_variety(lemniscate, n = 100, sd = SD_A, w = 2)
 
-# seed 7 is chosen, not lucky: it traverses the whole lemniscate — left lobe,
-# through the node, around the right — instead of stalling in one lobe.
-d_path <- hmc_path(lemniscate, sd = SD_A, epsilon = 0.010, L = 340,
-                   start = on_lemniscate(0.45), seed = 7)
+d_path <- aimed_path(lemniscate, sd = SD_A, angle = 25, amp = 0.055,
+                     arclen = 2.8, start = on_lemniscate(-0.62))
 
 d_hdr <- rmix()
 
