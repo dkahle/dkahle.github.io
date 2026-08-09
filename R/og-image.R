@@ -132,10 +132,16 @@ sample_variety <- function(poly, n = 9000, sd = 0.03, w = 2) {
 }
 
 #' @param curve overlay the exact variety with vnorm::geom_variety().
+#' @param curve_n grid resolution geom_variety() contours on. Checked rather
+#'   than guessed: at 60x zoom on both the node and the outer tips, the geom's
+#'   own default of 201 is already gap-free and indistinguishable from 1201 —
+#'   which costs 12s a build against 0.23s, since the grid is n x n. 401 is
+#'   headroom for the thicker line, not a fix for anything visible.
 #' @param path  optional leapfrog trajectory from hmc_path(), drawn with a
 #'              closed arrowhead at the proposal end.
 plot_variety <- function(pts, poly = NULL, cols = dens_warm,
                          size = 0.5, alpha = 0.8, curve = FALSE,
+                         curve_color = red, curve_width = 0.9, curve_n = 401,
                          path = NULL, path_color = red, path_width = 0.4,
                          head = 0.07, xlim, ylim) {
   # A psize column (see size_jitter()) varies the points individually; without
@@ -148,8 +154,9 @@ plot_variety <- function(pts, poly = NULL, cols = dens_warm,
   }
   p <- p + scale_color_gradientn(colors = cols)
   if (curve && !is.null(poly)) {
-    p <- p + geom_variety(poly = poly, color = lgray,
-                          linewidth = 0.3, inherit.aes = FALSE)
+    p <- p + geom_variety(poly = poly, color = curve_color,
+                          linewidth = curve_width, n = curve_n,
+                          inherit.aes = FALSE)
   }
   if (!is.null(path)) {
     p <- p + geom_path(
