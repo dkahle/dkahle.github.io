@@ -154,6 +154,45 @@ amp_exp <- function(c = 0.25) function(t) {
   z / max(z)
 }
 
+#' Refine an existing realization onto a finer grid, keeping it unchanged.
+#'
+#' Resampling on a finer grid does NOT give you the same picture at higher
+#' resolution — sample_paths() draws n x m normals, so changing n changes the
+#' draw and you get a different realization from the same seed. To add detail to
+#' a realization you already like, condition on it: hold X fixed at the coarse
+#' nodes and simulate the new points from the conditional law.
+#'
+#' Worth doing because the rough half is Brownian, which has structure at every
+#' scale — a finer grid is not cosmetic there, it resolves texture that a coarse
+#' grid simply never drew. The smooth half is unaffected, as it should be.
+#'
+#' @param k points inserted between each pair of coarse nodes; k = 4 takes 700
+#'   nodes to 2797.
+#' @return list(t, X, idx); X[idx, ] reproduces X_c to within the jitter.
+refine <- function(t_c, X_c, k = 4, ell = 0.20,
+                   share = function(t) (1 - t)^4, amp = amp_exp(0.25),
+                   jit = 1e-9) {
+  t_f <- sort(unique(c(t_c, as.vector(sapply(seq_len(length(t_c) - 1), function(i)
+           seq(t_c[i], t_c[i + 1], length.out = k + 1)[-c(1, k + 1)])))))
+  idx <- match(t_c, t_f)
+  stopifnot(!anyNA(idx))
+
+  K   <- bridge_kernel(t_f, ell = ell, share = share, amp = amp)
+  Kcc <- K[idx, idx]; Kfc <- K[, idx]
+  A   <- Kfc %*% solve(Kcc + diag(jit, length(idx)))
+  mu  <- A %*% X_c
+  Sig <- K - A %*% t(Kfc)
+
+  # Sig is singular by construction — conditional variance is exactly 0 at every
+  # coarse node — so a plain Cholesky fails. Pivoting handles the rank deficit.
+  R <- suppressWarnings(chol(Sig + diag(jit, nrow(Sig)), pivot = TRUE))
+  p <- attr(R, "pivot")
+  y <- matrix(0, nrow(Sig), ncol(X_c))
+  y[p, ] <- crossprod(R, matrix(rnorm(nrow(Sig) * ncol(X_c)), nrow(Sig)))
+
+  list(t = t_f, X = mu + y, idx = idx)
+}
+
 #' Draw m paths. Jitter is not optional here — see the note up top.
 sample_paths <- function(K, m, jit = 1e-8) {
   n <- nrow(K)
@@ -168,10 +207,14 @@ sample_paths <- function(K, m, jit = 1e-8) {
 #'   brighter — which fakes a bloom without any compositing. It earns its keep
 #'   more with several colors than with one, since the halo separates paths
 #'   where they cross.
+#' @param paths optional precomputed path matrix (e.g. from refine()); when
+#'   given, K and seed are ignored and t must match its rows.
 banner <- function(K, t, m = 16, seed = 16, glow = TRUE, cols = soft8,
-                   lw = 0.45, alpha = 0.85) {
-  set.seed(seed)
-  P  <- sample_paths(K, m)
+                   lw = 0.45, alpha = 0.85, paths = NULL) {
+  if (is.null(paths)) { set.seed(seed); paths <- sample_paths(K, m) }
+  P <- paths
+  m <- ncol(P)
+  stopifnot(nrow(P) == length(t))
   df <- data.frame(t = rep(t, m), y = as.vector(P),
                    id  = factor(rep(seq_len(m), each = length(t))),
                    col = rep(rep(cols, length.out = m), each = length(t)))
@@ -213,7 +256,11 @@ K  <- bridge_kernel(tt, ell = 0.20, share = function(t) (1 - t)^4,
 # empty corner at these settings, but re-check with a mock circle if you retune
 # share or amp, since both move where the dense jagged region sits.
 
-(p_banner <- banner(K, tt, m = 16, seed = 16, glow = FALSE))
+SEED <- 56
+set.seed(SEED); X_coarse <- sample_paths(K, 16)
+set.seed(SEED); fine <- refine(tt, X_coarse, k = 4)   # 700 -> 2797 points
+
+(p_banner <- banner(K = NULL, fine$t, paths = fine$X, glow = FALSE))
 
 
 # 3. save ----------------------------------------------------------------------
