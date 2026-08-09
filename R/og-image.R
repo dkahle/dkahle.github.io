@@ -388,8 +388,13 @@ d_variety <- sample_variety(lemniscate, n = 150, sd = SD_A, w = 2)
 SIZE_A <- 1.6
 d_variety$psize <- size_jitter(nrow(d_variety), base = SIZE_A)
 
+# arclen is tuned to where the trajectory is momentarily parallel to the curve,
+# so the arrowhead — which follows the final segment — reads as continuous with
+# the tail. Ending mid-oscillation instead puts the head ~58 degrees off the
+# direction of travel, which looks like a kink. The optimum is narrow: 7.60
+# gives 0.2 degrees, 7.62 gives 5.9. Re-tune it if sd, amp, or angle change.
 d_path <- aimed_path(lemniscate, sd = SD_A, angle = 25, amp = 0.055,
-                     arclen = 7.5, start = on_lemniscate(-0.62))
+                     arclen = 7.60, start = on_lemniscate(-0.62))
 
 d_hdr <- rmix()
 
