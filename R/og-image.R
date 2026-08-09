@@ -264,12 +264,18 @@ hmc_path <- function(poly, sd, epsilon, L, start, seed = NULL) {
 #'     lands on an arbitrary branch. Paths that cross it come out as tangles.
 #'     Starting at theta = -0.62 with arclen ~2.8 stays inside the right lobe.
 #'
-#'   * A BIG SWING USUALLY GETS REJECTED. It ends far out in the tail, so the
-#'     acceptance ratio collapses — amp 0.055 at arclen 3.3 gives Pacc 0.08.
-#'     Tuning arclen so the last oscillation returns to the curve fixes it;
-#'     2.8 ends 0.001 away with Pacc 1. Check attr(path, "Pacc").
+#'   * safety SETS BOTH ACCURACY AND SMOOTHNESS. epsilon is safety * the
+#'     stability ceiling, and since L is arclen/(speed*epsilon), a smaller
+#'     safety buys proportionally more vertices — which is what stops the
+#'     polyline looking faceted. It is not only cosmetic: at safety 0.22 the
+#'     leapfrog leaked enough energy to drop Pacc to 0.21 and to inflate the
+#'     reported arclen from its true 7.40 to 7.80. At 0.03 the path is ~2.4px
+#'     per segment at 1200px wide, Pacc is 1, and arclen has converged.
+#'
+#'   * A BIG SWING CAN STILL GET REJECTED if it ends far out in the tail, so
+#'     check attr(path, "Pacc") after retuning amp or arclen.
 aimed_path <- function(poly, sd, angle, amp, arclen,
-                       start, safety = 0.22) {
+                       start, safety = 0.03) {
   pot <- variety_potential(poly, sd)
   gn  <- sqrt(sum(pot$grad_g(start)^2))
 
@@ -374,7 +380,7 @@ set.seed(42)
 # note above aimed_path().
 SD_A <- 0.035
 
-d_variety <- sample_variety(lemniscate, n = 100, sd = SD_A, w = 2)
+d_variety <- sample_variety(lemniscate, n = 150, sd = SD_A, w = 2)
 
 # Base point size, doubled from the 0.8 this started at. Sizes are drawn here
 # rather than in plot_variety() so they stay fixed under set.seed(42) while you
