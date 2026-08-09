@@ -102,17 +102,25 @@ to_corr <- function(K) {
 #' @param share function of t giving the fraction of variance that is Brownian.
 #'   Must run 1 -> 0. This is the transition control, and it means what it says:
 #'   share(0.5) = 0.25 puts a quarter of the variance in the rough component at
-#'   the midpoint. Bigger exponents finish the handover sooner. (1-t)^2 keeps
-#'   visible roughness past the middle and still arrives smooth; (1-t) is so
-#'   gradual it is still faintly jagged at the right edge, because Brownian
-#'   dominates at small scales even at a low share.
+#'   the midpoint. BIGGER EXPONENTS SMOOTH SOONER, which is the opposite of what
+#'   "linear" suggests — (1-t) is the slowest of the family, not the fastest,
+#'   and is still faintly jagged at the right edge because Brownian dominates at
+#'   small scales even at a low share. (1-t)^4 clears the right ~40% into smooth
+#'   sweeps; ^2 stays rough past the middle; beyond ^6 the handover compresses.
+#'
+#'   Do NOT ramp share linearly to exactly zero part-way across, e.g.
+#'   pmax(0, 1 - t/0.6). It looks like the fastest option on paper and it is
+#'   measurably clean — roughness falls to 0.004 past the cutoff — but the
+#'   process becomes purely squared-exponential there, whose correlation length
+#'   is far longer, so the paths visibly snap from jagged into clean arcs. It
+#'   reads as a switch being flipped, not a transition.
 #' @param amp function of t giving the AMPLITUDE envelope — the spread of the
 #'   paths you actually see, not the variance. It is parameterised this way on
 #'   purpose: an earlier version took an exponent on the variance, and since the
 #'   visible spread is its square root, "quadratic variance" silently drew a
 #'   linear cone. Squaring happens internally now, so what you write is what you
 #'   see. Use amp_poly() or amp_exp() below.
-bridge_kernel <- function(t, ell = 0.20, share = function(t) (1 - t)^2,
+bridge_kernel <- function(t, ell = 0.20, share = function(t) (1 - t)^4,
                           amp = amp_exp(0.25)) {
   n <- length(t)
   C_rough  <- to_corr(outer(t, t, pmin) - outer(t, t, "*"))
@@ -195,7 +203,7 @@ save_banner <- function(p, file, width = 1584, height = 396, dpi = 150) {
 
 n_grid <- 700
 tt <- seq(0, 1, length.out = n_grid)
-K  <- bridge_kernel(tt, ell = 0.20, share = function(t) (1 - t)^2,
+K  <- bridge_kernel(tt, ell = 0.20, share = function(t) (1 - t)^4,
                     amp = amp_exp(0.25))
 
 
