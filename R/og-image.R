@@ -19,7 +19,9 @@ suppressPackageStartupMessages({
   library(mpoly)     # masks ggplot2::vars — harmless, nothing here uses vars()
 })
 
-OUT <- "."          # where the PNGs land
+OUT  <- "."              # where the PNGs land
+SAVE <- !interactive()   # Rscript writes the PNGs; source()-ing in a session
+                         # just builds p_a/p_b/p_c. Override by setting it.
 
 # palette (styles.scss) --------------------------------------------------------
 dark  <- "#141A1C"  # $theme-dark-gray   — page background
@@ -148,19 +150,38 @@ rmix <- function(n = 3000,
 }
 
 
-# render -----------------------------------------------------------------------
+# 1. data ----------------------------------------------------------------------
+# The slow step: rvnorm() runs a few seconds. Do this once, then iterate on the
+# plots below without paying for it again.
 
 set.seed(42)
 
-save_og(
-  plot_variety(sample_variety(lemniscate, sd = 0.03, w = 2), poly = lemniscate,
-               xlim = c(-1.85, 1.85), ylim = c(-0.971, 0.971)),
-  "og-a-variety.png"
-)
+d_variety <- sample_variety(lemniscate, sd = 0.03, w = 2)
+d_hdr     <- rmix()
 
-save_og(plot_streams(field_spiral), "og-b-streams.png")
+# The stream field has no data step — geom_stream_field() integrates the field
+# at draw time, so its "data" is the function field_spiral itself.
 
-save_og(
-  plot_hdr(rmix(), xlim = c(-3.6, 3.4), ylim = c(-1.7, 1.65)),
-  "og-c-hdr.png"
-)
+
+# 2. plots ---------------------------------------------------------------------
+# Cheap to rebuild. Tweak here and print p_a / p_b / p_c to look at one.
+
+p_a <- plot_variety(d_variety, poly = lemniscate,
+                    xlim = c(-1.85, 1.85), ylim = c(-0.971, 0.971))
+
+p_b <- plot_streams(field_spiral)
+
+p_c <- plot_hdr(d_hdr, xlim = c(-3.6, 3.4), ylim = c(-1.7, 1.65))
+
+
+# 3. save ----------------------------------------------------------------------
+# A plot printed to the IDE pane is NOT the card. These all use coord_fixed(),
+# so the pane letterboxes them at whatever aspect the pane happens to be —
+# composition only reads true at 1200x630. Check the PNG before settling on a
+# design.
+
+if (SAVE) {
+  save_og(p_a, "og-a-variety.png")
+  save_og(p_b, "og-b-streams.png")
+  save_og(p_c, "og-c-hdr.png")
+}
