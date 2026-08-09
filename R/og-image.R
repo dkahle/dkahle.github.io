@@ -8,12 +8,16 @@
 #
 #   Rscript R/og-image.R
 #
-# Needs ggplot2, ggvfields, and ggdensity on the library path.
+# Needs ggplot2, ggvfields, ggdensity, vnorm, and mpoly on the library path.
 # ------------------------------------------------------------------------------
 
-library(ggplot2)
-library(ggvfields)
-library(ggdensity)
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(ggvfields)
+  library(ggdensity)
+  library(vnorm)
+  library(mpoly)     # masks ggplot2::vars — harmless, nothing here uses vars()
+})
 
 OUT <- "."          # where the PNGs land
 
@@ -45,53 +49,55 @@ save_og <- function(p, file, width = 1200, height = 630, dpi = 150) {
 
 # A. algebraic variety ---------------------------------------------------------
 #
-# Rejection-sample points near the real variety {g = 0}, then colour by
-# distance to it.
+# Draws from the variety normal distribution with vnorm: points concentrated on
+# the real variety {p = 0} with Gaussian falloff perpendicular to it, coloured
+# by the density that actually generated them. So the colour is meaningful —
+# blue is the high-density core, gold are genuine tail draws.
 #
-# The one non-obvious bit: DON'T filter on |g| < tol. The width of that band
-# scales like tol/||grad g||, so it balloons wherever the gradient is small —
-# which is what made the first attempt blob at the centre. Dividing by the
-# gradient norm gives a first-order distance estimate and therefore a tube of
-# roughly uniform width. Singular points (where grad g = 0, e.g. the node of a
-# lemniscate) will still thicken; that's real, not an artefact.
+# Two things that will bite you:
+#
+#   * rejection = TRUE. The default routes through Stan, which for these curves
+#     is far slower than it's worth (it hung a session for 4+ minutes). The
+#     rejection sampler does 9k points in ~4 s.
+#
+#   * w is a BOX WINDOW and it defaults to (-1, 1) on every variable. Leave it
+#     and the sample is silently clipped — the lemniscate below runs out to
+#     x = ±1.79, so the default window quietly lops off both lobes and you get
+#     a plausible-looking but wrong picture. Always set w past the curve's
+#     real extent.
 
-#' Sample points near the real variety of g.
+#' Sample from the variety normal distribution and score by its density.
 #'
-#' @param g   function(x, y) — the defining polynomial, vectorised.
-#' @param tol tube half-width, in units of approximate distance to the curve.
-#' @param n   how many points to keep.
-#' @param N   how many candidates to draw before rejecting (raise if you get
-#'            fewer than n points back).
-sample_variety <- function(g, xlim, ylim, tol = 0.045, n = 7000, N = 6e6) {
-  x <- runif(N, xlim[1], xlim[2])
-  y <- runif(N, ylim[1], ylim[2])
-
-  h  <- 1e-5                                    # numeric gradient, so that
-  gx <- (g(x + h, y) - g(x - h, y)) / (2 * h)   # swapping curves is a
-  gy <- (g(x, y + h) - g(x, y - h)) / (2 * h)   # one-line change
-
-  d <- abs(g(x, y)) / sqrt(gx^2 + gy^2)
-  k <- which(is.finite(d) & d < tol)
-  if (!length(k)) stop("no points within tol — loosen tol or widen the window")
-  k <- k[sample(length(k), min(n, length(k)))]
-
-  data.frame(x = x[k], y = y[k], d = d[k])
+#' @param poly an mpoly object, e.g. mp("y^2 - x^3 + x").
+#' @param sd   perpendicular spread around the variety. Smaller = tighter tube.
+#' @param w    half-width of the sampling box; must exceed the curve's extent.
+sample_variety <- function(poly, n = 9000, sd = 0.03, w = 2) {
+  s <- rvnorm(n, poly, sd = sd, rejection = TRUE, w = w)
+  df <- as.data.frame(s)
+  names(df) <- c("x", "y")
+  df$d <- pdvnorm(s, poly, sd = sd)
+  df
 }
 
-plot_variety <- function(pts, cols = c(gold, green, blue),
-                         size = 0.5, alpha = 0.8, xlim, ylim) {
-  ggplot(pts, aes(x, y, colour = d)) +
+#' @param curve overlay the exact variety with vnorm::geom_variety().
+plot_variety <- function(pts, poly = NULL, cols = c(gold, green, blue),
+                         size = 0.5, alpha = 0.8, curve = FALSE, xlim, ylim) {
+  p <- ggplot(pts, aes(x, y, colour = d)) +
     geom_point(size = size, alpha = alpha) +
-    scale_colour_gradientn(colours = cols) +
-    coord_fixed(xlim = xlim, ylim = ylim, expand = FALSE) +
-    bare
+    scale_colour_gradientn(colours = cols)
+  if (curve && !is.null(poly)) {
+    p <- p + geom_variety(poly = poly, colour = lgray,
+                          linewidth = 0.3, inherit.aes = FALSE)
+  }
+  p + coord_fixed(xlim = xlim, ylim = ylim, expand = FALSE) + bare
 }
 
-# some curves to try — the frame is 1.91:1, so wide curves fit best
-lemniscate <- function(x, y, a = 3.2) (x^2 + y^2)^2 - a * (x^2 - y^2)
-elliptic   <- function(x, y)          y^2 - x^3 + x        # sparse; lots of dead space
-trifolium  <- function(x, y)          (x^2 + y^2)^2 - (x^3 - 3 * x * y^2)
-astroid    <- function(x, y, a = 1)   (x^2 + y^2 - a^2)^3 + 27 * a^2 * x^2 * y^2
+# Curves to try. The frame is 1.91:1, so wide curves fit best; set w and the
+# coord_fixed window to match the curve's real extent (printed by sample_variety
+# if you check range()).
+lemniscate <- mp("x^4 + 2 x^2 y^2 + y^4 - 3.2 x^2 + 3.2 y^2")  # x to ±1.79
+elliptic   <- mp("y^2 - x^3 + x")                # oval + branch; lots of dead space
+trifolium  <- mp("x^4 + 2 x^2 y^2 + y^4 - x^3 + 3 x y^2")
 
 
 # B. ggvfields stream field ----------------------------------------------------
@@ -146,10 +152,9 @@ rmix <- function(n = 3000,
 
 set.seed(42)
 
-vx <- c(-2.5, 2.5); vy <- c(-1.31, 1.31)
 save_og(
-  plot_variety(sample_variety(lemniscate, c(-2.6, 2.6), c(-1.5, 1.5)),
-               xlim = vx, ylim = vy),
+  plot_variety(sample_variety(lemniscate, sd = 0.03, w = 2), poly = lemniscate,
+               xlim = c(-1.85, 1.85), ylim = c(-0.971, 0.971)),
   "og-a-variety.png"
 )
 
