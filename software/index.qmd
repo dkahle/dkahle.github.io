@@ -36,7 +36,7 @@ Vector field visualization for ggplot2. Provides geoms for visualizing vector-va
 
 ### [ggfunction](https://github.com/dusty-turner/ggfunction) <small class="text-muted">with Dusty Turner, James Otto, and Rodney Sturdivant · in development</small>
 
-Mathematical functions and probability distributions, along with estimates, in ggplot2. An accompanying paper is under review.
+Mathematical functions and probability distributions, along with estimates, in ggplot2. An accompanying paper is in preparation.
 
 [[GitHub]](https://github.com/dusty-turner/ggfunction)
 
@@ -70,7 +70,7 @@ Symbolic computation with multivariate polynomials in R. Provides a full framewo
 
 ### [vnorm](https://github.com/dkahle/vnorm) <small class="text-muted">with Sonish Lamsal · in development</small>
 
-The variety normal distribution in R. A Monte Carlo platform for sampling from and working with probability distributions supported on algebraic varieties.
+The variety normal distribution in R. A Monte Carlo platform for sampling from and working with probability distributions supported on algebraic varieties. An accompanying paper is in preparation.
 
 [[GitHub]](https://github.com/dkahle/vnorm)
 

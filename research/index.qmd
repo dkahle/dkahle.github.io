@@ -77,8 +77,6 @@ Seaman, J., J. Stamey, **D. Kahle**, and S. Blair (2019). "A Brief Guide to Baye
 ::: {.papers .gold}
 Mitchell, C., P. James, D. Kring, and **D. Kahle**. "Impact Induced Porosity of Meteor Crater." In revision.
 
-Turner, D., **D. Kahle**, R. Sturdivant, and J. Otto. "ggfunction: Functions and Distributions in ggplot2."
-
 **Kahle, D.** and J. Hauenstein. "[Stochastic Exploration of Real Varieties via Variety Distributions](https://arxiv.org/abs/2410.16071)." arXiv:2410.16071.
 
 Kim, F. S., **D. Kahle**, N. S. Fleming, M. Gallaugher, T. Houston, C. Fox, B. Cahill, and R. Sturdivant. "Comparing Costs and Utilization Between Airrosti and Five Provider Types for Musculoskeletal Pain."
@@ -87,6 +85,10 @@ Kim, F. S., **D. Kahle**, N. S. Fleming, M. Gallaugher, T. Houston, C. Fox, B. C
 ## In Preparation
 
 ::: {.papers .red}
+Turner, D., **D. Kahle**, R. Sturdivant, and J. Otto. "ggfunction: Functions and Distributions in ggplot2."
+
+Lamsal, S. and **D. Kahle**. "vnorm: The Variety Normal Distribution in R."
+
 Blair, S., **D. Kahle**, and J. Seaman. "Sensitivity to Prior Misspecification in the Mode-Percentile Method of Elicitation."
 
 Otto, J. and **D. Kahle**. "tldrPages: Quick Documentation in the R Console."
