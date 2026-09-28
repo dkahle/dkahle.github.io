@@ -6,7 +6,7 @@ toc-title: ""
 
 I develop and maintain open-source R packages across statistical graphics, algebraic statistics, Bayesian methods, and more. Source code is on [GitHub](https://github.com/dkahle).
 
-<small class="text-muted">Download counts are all-time CRAN downloads as of August 2026, collected with [cranlogs](https://cran.r-project.org/package=cranlogs).</small>
+<small class="text-muted">Download counts are all-time CRAN downloads as of September 2026, collected with [cranlogs](https://cran.r-project.org/package=cranlogs).</small>
 
 ## Statistical Graphics
 
@@ -22,7 +22,7 @@ Spatial visualization with ggplot2. Downloads map tiles from Google Maps, OpenSt
 
 Interpretable bivariate density visualization for ggplot2 using highest density regions (HDRs). HDRs convey where the data actually are, rather than the density value itself, making them more natural to communicate.
 
-[[GitHub]](https://github.com/jamesotto852/ggdensity) [[CRAN]](https://cran.r-project.org/package=ggdensity) [[Docs]](https://jamesotto852.github.io/ggdensity/) · 46K downloads
+[[GitHub]](https://github.com/jamesotto852/ggdensity) [[CRAN]](https://cran.r-project.org/package=ggdensity) [[Docs]](https://jamesotto852.github.io/ggdensity/) · 48K downloads
 
 ---
 
@@ -30,7 +30,7 @@ Interpretable bivariate density visualization for ggplot2 using highest density 
 
 Vector field visualization for ggplot2. Provides geoms for visualizing vector-valued functions and fields, with applications in physics, fluid dynamics, and statistical modeling. Described in *The R Journal* (2026).
 
-[[GitHub]](https://github.com/dusty-turner/ggvfields) [[CRAN]](https://cran.r-project.org/package=ggvfields) [[Docs]](https://dustysturner.com/ggvfields/) · 3.6K downloads
+[[GitHub]](https://github.com/dusty-turner/ggvfields) [[CRAN]](https://cran.r-project.org/package=ggvfields) [[Docs]](https://dustysturner.com/ggvfields/) · 4.2K downloads
 
 ---
 
@@ -64,7 +64,7 @@ Tools for computing and visualizing bivariate level sets in R.
 
 Symbolic computation with multivariate polynomials in R. Provides a full framework for polynomial arithmetic, calculus, evaluation, and manipulation in multiple variables.
 
-[[GitHub]](https://github.com/dkahle/mpoly) [[CRAN]](https://cran.r-project.org/package=mpoly) · 121K downloads
+[[GitHub]](https://github.com/dkahle/mpoly) [[CRAN]](https://cran.r-project.org/package=mpoly) · 129K downloads
 
 ---
 
@@ -80,7 +80,7 @@ The variety normal distribution in R. A Monte Carlo platform for sampling from a
 
 An interface from R to Macaulay2, a computer algebra system for algebraic geometry and commutative algebra. Enables polynomial ring computations from within R.
 
-[[GitHub]](https://github.com/coneill-math/m2r) [[CRAN]](https://cran.r-project.org/package=m2r) · 34K downloads
+[[GitHub]](https://github.com/coneill-math/m2r) [[CRAN]](https://cran.r-project.org/package=m2r) · 35K downloads
 
 ---
 
@@ -124,7 +124,7 @@ Tropical geometry in R. Provides tools for computing and visualizing tropical al
 
 The inverse gamma distribution in R: density, distribution, quantile, and random generation functions following base R conventions. Described in *PeerJ Computer Science* (2025).
 
-[[GitHub]](https://github.com/dkahle/invgamma) [[CRAN]](https://cran.r-project.org/package=invgamma) · 467K downloads
+[[GitHub]](https://github.com/dkahle/invgamma) [[CRAN]](https://cran.r-project.org/package=invgamma) · 487K downloads
 
 ---
 
@@ -158,7 +158,7 @@ The beta distribution with support [l, u] in R, generalizing the standard beta d
 
 Bayesian regression with unmeasured confounders. Provides tools for fitting models that account for unmeasured confounding via informative priors. Described in *BMC Medical Research Methodology* (2024).
 
-[[GitHub]](https://github.com/ryanhebdon72/unmconf) [[CRAN]](https://cran.r-project.org/package=unmconf) · 6.2K downloads
+[[GitHub]](https://github.com/ryanhebdon72/unmconf) [[CRAN]](https://cran.r-project.org/package=unmconf) · 6.6K downloads
 
 ---
 
@@ -184,7 +184,7 @@ A Shiny app for eliciting prior distributions graphically, implementing the line
 
 Threshold Indicator Taxa Analysis. Identifies community change points along environmental gradients using indicator species analysis and bootstrapping.
 
-[[CRAN]](https://cran.r-project.org/package=TITAN2) · 46K downloads
+[[CRAN]](https://cran.r-project.org/package=TITAN2) · 47K downloads
 
 ---
 
@@ -211,7 +211,7 @@ Short-form documentation in the R console. Provides compact, scannable help page
 
 tldrPages documentation for base R functions, providing the content layer for the tldrPages system.
 
-[[GitHub]](https://github.com/jamesotto852/tldrDocs) [[CRAN]](https://cran.r-project.org/package=tldrDocs) · 1.6K downloads
+[[GitHub]](https://github.com/jamesotto852/tldrDocs) [[CRAN]](https://cran.r-project.org/package=tldrDocs) · 1.8K downloads
 
 ---
 

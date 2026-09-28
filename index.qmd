@@ -39,6 +39,10 @@ Most of my work is in statistical computing and graphics, especially statistical
 
 ::: {.timeline}
 ::: {.timeline-item}
+**Co-Graduate Program Director, Statistical Science**\
+[Baylor University](https://statistics.artsandsciences.baylor.edu) · 2026 – present
+:::
+::: {.timeline-item}
 **Professor of Statistical Science**\
 [Baylor University](https://statistics.artsandsciences.baylor.edu) · 2026 – present
 :::
